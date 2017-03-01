@@ -1,11 +1,11 @@
 import sys
 import os
 import csv
+import re
 
 def extract(input, output):
 
-
-	csv_f = csv.reader(input)
+	csv_f = csv.reader(input)	
 	wr = csv.writer(output, delimiter=',', quoting=csv.QUOTE_ALL)
 
 	wr.writerow(["Questions", "Category"])
@@ -14,18 +14,24 @@ def extract(input, output):
 		for column in range(2, len(row)):
 			if row[column].count(":") == 0:
 				row_items = (row[column].split('\n'))
-				print ("row_item: ", row_items)
 				row_items = delete_empty_string(row_items)
+				print ("row_item: ", row_items)
 				wr = csv.writer(output, delimiter='\n', quoting=csv.QUOTE_ALL)
 				wr.writerow(row_items)
 
 
 def delete_empty_string(my_list):
-	
 
 	for item in my_list:
 		if len(item) == 0 or item == " ":
 			my_list.remove(item)
+
+		if re.match("^[0-9]", item) != None:
+			index = my_list.index(item)
+			tmp = item.lstrip('0123456789.- ')
+			my_list.remove(item)
+			my_list.insert(index, tmp)
+			print item
 
 	return my_list
 
