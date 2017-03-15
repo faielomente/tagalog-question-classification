@@ -38,7 +38,7 @@ def delete_empty_string(my_list):
 
 
 input_file = open(os.path.abspath('files/Help a CS Student Graduate.csv'))
-output_file = open(os.path.abspath('files/output.csv'), 'w')
+output_file = open(os.path.abspath('files/cleaning_output.csv'), 'w')
 extract(input_file, output_file)
 input_file.close()
 output_file.close()
