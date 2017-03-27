@@ -5,10 +5,12 @@
 import sys
 import re
 
-# wordfile = open(sys.argv[1]) #file of words to process; assumes one word per line
 
 infix = {'um', 'in'} ##list of infix
-prefix = {'mag', 'nag', 'magsi', 'nagsi', 'mang', 'nang', 'maka', 'naka','magka','magkaka','nagka','nagkaka', 'magma', 'nagma', 'magpa', 'nagpa', 'magpapa', 'nagpapa', 'magpaka', 'nagpaka', 'magpati', 'nagpati', 'ma', 'na', 'mai', 'nai', 'maipa', 'naipa', 'maipag', 'naigpag', 'makapag', 'nakapag', 'mapa', 'napa', 'makapang', 'nakapang', 'nakapan', 'makapan', 'makapam', 'nakapam', 'mang', 'nang', 'man', 'nan', 'mam', 'nam', 'mangag', 'nangag', 'i', 'ipa', 'ipaki', 'ipakipa', 'isa', 'ka', 'pa', 'pag', 'papag', 'mapag', 'napag', 'pang', 'ipag', 'ipang', 'pinag', 'ika', 'ikapang', 'paka', 'paki', 'kasim', 'kasing', 'pagpa' } #prefixes
+prefix = {'makapang','nakapang','nakapan','makapan','nakapam','makapam','nakapag','makapag','nagpati','magpati','nagpaka','magpaka',
+    'magpapa','nagpapa','nagkaka','magkaka','ipakipa','ikapang','naipag','mangag','nangag','kasing','ipang','pinag','papag','mapag', 'kapag',
+    'napag','ipaki','magka','magsi','nagka','magma','nagma','magpa','nagpa','maipa','naipa','kasim','pagpa','paka','paki','pang','ipag',
+    'mang','nang','maka','naka','mapa','napa','ika','pag','isa','ipa','mai','nai','mag','nag','man','nan','mam','nam','ma','na','ka','pa'}
 suffix = {'an', 'han', 'in', 'hin'} #suffixes
 vowel = {'a','e','i','o','u'}
 
@@ -146,3 +148,30 @@ def main(args):
 		root, the_reduplication = reduplication(temp_word)
 
 		print (words.strip(), root.strip(), the_prefix, the_infix, the_suffix, the_reduplication)
+
+
+
+def extract_affixes(word):
+
+		the_prefix = "_"
+		the_infix = "_"
+		the_suffix = "_"
+		the_reduplication = "_"
+		root = word	
+		temp_word, the_infix = strip_infix(word.lower())	 ###remove any infix first
+		prefix_found=False
+
+		if len(temp_word.strip()) > 6: #usually root words are 4-5 characters in length
+		
+			temp_word,prefix_found,the_prefix = strip_prefix(temp_word) #try to check prefixes and suffixes
+			temp_word,the_suffix = strip_suffix(temp_word)
+
+		while(prefix_found == True and len(temp_word) > 7):
+			temp_word,prefix_found,the_prefix = strip_prefix(temp_word) #try to check prefixes and suffixes
+		
+		root, the_reduplication = reduplication(temp_word)
+
+		print (word.strip(), root.strip(), the_prefix, the_infix, the_suffix, the_reduplication)
+
+
+# wordfile = open(sys.argv[1]) #file of words to process; assumes one word per line

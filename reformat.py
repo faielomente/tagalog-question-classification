@@ -17,10 +17,14 @@ def read():
 			data_array.append(word_list)
 		print (data_array)
 
-# def extract_word_parts(data):
-# 	for sentence in data:
-# 		for word in sentence:
-# 			parts = 
+	return data_array
 
-read()
+
+def extract_word_parts(data):
+	for sentence in data:
+		for word in sentence:
+			parts = stemmer.extract_affixes(word)
+
+# data = read()
+# extract_word_parts(data)
 stemmer.main("files/stem_words_test.txt")
