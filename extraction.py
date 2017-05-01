@@ -5,7 +5,7 @@ import re
 
 def extract(input, output):
 
-	csv_f = csv.reader(input)	
+	csv_f = csv.reader(input)
 	wr = csv.writer(output, delimiter=',', quoting=csv.QUOTE_ALL)
 
 	wr.writerow(["Questions", "Category"])

@@ -1,7 +1,8 @@
 import re
 import sys
 import csv
-
+import os
+    
 
 infix = ['um', 'in'] ##list of infix
 prefix = ['makapang','nakapang','nakapan','makapan','nakapam','makapam','nakapag','makapag','nagpati','magpati','nagpaka','magpaka',
@@ -89,11 +90,15 @@ def check_reduplication(word):
 
 if __name__ == "__main__":
     
-    wordfile = open(sys.argv[1])
+    # wordfile = open(sys.argv[1])
+    wordfile = open(os.path.abspath('files/stem_words_test.txt'))
+    # wordfile = open(os.path.abspath('files/for_stemming.txt'))
     infix_dict = {'word': "", 'infix': "_"}
     pref_dict = {'word': "", 'prefix': "_", 'has_pref': False}
     redup_dict = {'word': "", 'redup': "_"}
     suf_dict = {'word':"", 'suffix': "_"}
+
+    morphology = {'word':"", 'root':"", 'prefix':"_", 'infix':"_", 'suffix':"_", 'redup':"_"}
 
     for words in wordfile.readlines():
         root = words    
@@ -117,10 +122,12 @@ if __name__ == "__main__":
         
         root = check_reduplication(temp_word)
 
-        # print(words.strip())
-        # print(redup_dict['word'].strip())
-        # print(pref_dict['prefix'])
-        # print(infix_dict['infix'])
-        # print(suf_dict['suffix'])
-        # print(redup_dict['redup'])
-        print (words.strip(), root['word'].strip(), pref_dict['prefix'], infix_dict['infix'], suf_dict['suffix'], redup_dict['redup'])
+        # print (words.strip(), root['word'].strip(), pref_dict['prefix'], infix_dict['infix'], suf_dict['suffix'], redup_dict['redup'])
+
+        morphology['word'] = words.strip()
+        morphology['root'] = root['word'].strip()
+        morphology['prefix'] = pref_dict['prefix']
+        morphology['suffix'] = infix_dict['infix']
+        morphology['redup'] = redup_dict['redup']
+
+        print (morphology)
