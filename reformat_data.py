@@ -1,8 +1,3 @@
-import sys	
-import os
-import csv
-import my_stemmer
-
 import sys
 import os
 import csv
