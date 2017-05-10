@@ -90,9 +90,9 @@ def check_reduplication(word):
 
     return d
 
-def format_data():
-    input_file = open(os.path.abspath('files/cleaning_output.csv'))
-    output_file = open(os.path.abspath('files/for_stemming.txt'), 'w+')
+def format_data(input, output):
+    input_file = input
+    output_file = output
     csv_f = csv.reader(input_file)
     ctr = 1
 
@@ -117,11 +117,9 @@ def format_data():
     input_file.close()
     output_file.close()
 
-format_data()
-
 
 def  write_to_file(stemmed_data):
-    output_file = open(os.path.abspath('files/for_pos_tagging.txt'), 'w')
+    output_file = open(os.path.abspath('files/testing_set_pos.in'), 'w')
     # print(stemmed_data)
 
     for dict in stemmed_data:
@@ -146,14 +144,16 @@ def main():
     Rearrange the data into vertical sentences.
     Each sentence ending with a questions mark
     """
-    format_data()
+    input = open(os.path.abspath('files/testing_data.csv'))
+    output = open(os.path.abspath('files/testing_set_pos.in'), 'w+')
+    format_data(input, output)
 
     """
     The output file of format_data() will be read.
     And each word is stemmed.
     """
     # wordfile = open(os.path.abspath('files/stem_words_test.txt'))
-    wordfile = open(os.path.abspath('files/for_stemming.txt'))
+    wordfile = open(os.path.abspath('files/testing_set_pos.in'))
 
     stemmed_data = list()
 
@@ -194,6 +194,8 @@ def main():
 
     write_to_file(stemmed_data)
     # print(stemmed_data)
+
+    wordfile.close()
 
 
 if __name__ == "__main__":
