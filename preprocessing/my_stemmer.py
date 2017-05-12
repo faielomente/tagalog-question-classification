@@ -100,7 +100,7 @@ def format_data(input, output):
         if ctr == 1:
             ctr+=1
         else:
-            for column in range(0, len(row)):
+            for column in range(0, len(row)-1):
                 sen = row[column].split(" ")
                 for word in sen:
                     if '?' in word:
@@ -119,7 +119,7 @@ def format_data(input, output):
 
 
 def  write_to_file(stemmed_data):
-    output_file = open(os.path.abspath('files/testing_set_pos.in'), 'w')
+    output_file = open(os.path.abspath('files/additional.in'), 'w')
     # print(stemmed_data)
 
     for dict in stemmed_data:
@@ -144,16 +144,16 @@ def main():
     Rearrange the data into vertical sentences.
     Each sentence ending with a questions mark
     """
-    input = open(os.path.abspath('files/testing_data.csv'))
-    output = open(os.path.abspath('files/testing_set_pos.in'), 'w+')
-    format_data(input, output)
+    # input = open(os.path.abspath('files/labelled_data.csv'))
+    # output = open(os.path.abspath('files/dataset_pos.in'), 'w+')
+    # format_data(input, output)
 
     """
     The output file of format_data() will be read.
     And each word is stemmed.
     """
     # wordfile = open(os.path.abspath('files/stem_words_test.txt'))
-    wordfile = open(os.path.abspath('files/testing_set_pos.in'))
+    wordfile = open(os.path.abspath('files/additional.in'))
 
     stemmed_data = list()
 

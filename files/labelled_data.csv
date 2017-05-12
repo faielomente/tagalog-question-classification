@@ -239,7 +239,7 @@ Ano ang kinain mo kanina? ,description
 Ano ang kinuha mong kurso? ,description
 Bakit ba ako nag UP? ,entity
 Bakit ang pangit mo? ,description
-Bakit siya pa? </3,description
+Bakit siya pa?,description
 Paano mo ginawa ang iyong thesis? ,description
 Paano mo ipapaliwanag ang lahat? ,entity
 Paano ko ba maiwawasto ang lahat? ,description
@@ -607,10 +607,10 @@ Paano nga ba ang magmahal?,description
 Paano kita mapapa-oo?,description
 Paano patahimikin si Faye?,description
 Paano patigilin si Faye?,description
+Kailan titigil si Faye?,numeric
 Kailan ba ako magkakasyota?,numeric
 Kailan kaya mapapansin ang aking lihim?,numeric
 Kailan sisikat ang araw?,numeric
-Kailan titigil si Faye?,numeric
 Kailan magigising ang pusong matagal nang natutulog?,numeric
 Sino ang lecheng guro na nagbagsak sa amin?,description
 Sino nga ba siya sa buhay mo?,description
@@ -754,7 +754,7 @@ Kailan hahaplusin ang pusong bitin na bitin?,Description
 Kailan ba magpapakasal si Faye Lomente?,Numeric
 Sino ang nagmamay-ari ng puso ni Faye Lomente?,Human
 "Sino ang pipiliin ko, siya ba na pangarap ko o siya bang kumakatok sa puso ko?",Human
-Sinog ang taong nagpapatibok ng puso ni Faye Lomente?,Human
+Sino ang taong nagpapatibok ng puso ni Faye Lomente?,Human
 "Alin sa dalawa, mamahalin mo ako o mamahalin kita?",Description
 "Alin ang naiiba, sunsilk, cream silk, rejoice, o head and shoulders?",Entity
 "Kung papipiliin ka, alin ang gusto mo maging tao, maging bagay og ang maging tayo?",Description
@@ -1790,13 +1790,24 @@ Sino ang iibigin ko?,Human
 "Alin ang pipiliin mo, dota o ako?",Entity
 Saan kaya matatagpuan ang pusong sawi?,Description
 Saan tayo magkita?,Location
-"Ano ang pangalan mo?, Ano ang hilig mo? Ano ang gusto mo?",Entity
-Bakit may Mahal Kang iba? Bakit ganun? Bakit ngayon ka lang?,Description
-Pano to Gawin? Paano ba ang magmahal? Paano magimpok?,Description
-Kailan ka aalis? Kailan ang kaarawan mo? Kailan nasagawa Ito?,Numeric
-Sino ang Mahal mo? Sino ka ba? Sino ang nagmamay ari nito?,Human
-Alin Dito ang mas sulit? Alin sa dalawa? Alin ang mas mahirap?,Entity
-Saan ka tutungo? Saan ka nakatira? Saan siya nadapa?,Location
+Ano ang pangalan mo?,Entity
+Ano ang gusto mo?,Entity
+Ano ang hilig mo?,Entity
+Bakit may Mahal Kang iba?,Description
+Bakit ngayon ka lang?,Numeric
+Bakit ganun?,Description
+Pano to Gawin?,Description
+Paano magimpok?,Description
+Paano ba ang magmahal?,Description
+Sino ka ba?,Human
+Kailan ang kaarawan mo?,Numeric
+Kailan nasagawa Ito?,Numeric
+Kailan ka aalis?,Numeric
+Sino ang mahal mo?,Human
+Alin Dito ang mas sulit?,Entity
+Alin ang mas mahirap?,Entity
+Alin sa dalawa?,Entity
+Sino ang nagmamay-ari nito?,Entity
 Ano ang tamang sagot?,Entity
 Ano ang ginagawa niya?,Entity
 Ano ang kaya mong gawin?,Description
@@ -1825,7 +1836,8 @@ Bakit mo ko iniwan?,Description
 Bakit di mo ko pinaglaban?,Description
 Bakit pa natin sinimulan kung sa huli iiwan mo rin lang naman?,Description
 Paano mo nagawa sa'kin 'to?,Description
-Paano na ang bukas kung wala ka? Paano ka nakakatulog sa gabi?,Description
+Paano ka nakakatulog sa gabi?,Description
+Paano na ang bukas kung wala ka?,Description
 Kailan mo naisipang bumitaw?,Numeric
 Kailan ka nagsawa?,Numeric
 Kailan mo ko babalikan?,Numeric
@@ -2191,7 +2203,7 @@ Kailan kaya darating ang sweldo?,Numeric
 Sino ba ang may-ari nito?,Human
 Alin ang naiiba sa dalawa?,Entity
 Saan siya pupunta?,Location
-Ano ang ibig sabihin ng gg?,Description
+Ano ang ibig sabihin ng gg?,Abbreviation
 Ano tunay na larawan ni Dr. Jose Rizal?,Entity
 Ano ang pangalan ng aso ni Dr. Jose Rizal?,Entity
 Bakit may langit at lupa?,Description
@@ -2214,16 +2226,16 @@ Saan ang palagi mong pinupuntahan?,Location
 Saan ka umuuwi?,Location
 Anong pangalan mo?,Entity
 Bakit mo nga ba siya minahal?,Description
-Paano maging gwapo? Pagiging chickboy mo ba?,Description
+Paano maging gwapo?,Description
 Kailan ka nagsinungalin sakin?,Numeric
 Sino ang laman ng puso mo?,Human
-Alin ang gusto mo? a) pogi na chikboy o b) simple na marunong makuntento,Human
+Alin ang gusto mo a) pogi na chikboy o b) simple na marunong makuntento?,Human
 Saan nga ba tayo patungo?,Location
 ano ang kulay ng damo?,Entity
-bakit mo ba ako mahal,Description
-paano kita kakalimutan,Description
-kailan tayo magpapakasal,Numeric
-sino ang mahal mo ,Human
+bakit mo ba ako mahal?,Description
+paano kita kakalimutan?,Description
+kailan tayo magpapakasal?,Numeric
+sino ang mahal mo?,Human
 alin ang maganda?,Entity
 saan yung bahay ko?,Location
 Ano ang ibig sabihin ng DSWD?,Description
@@ -2315,7 +2327,7 @@ Bakit ba ang tanga-tanga mo?,Description
 Paano ba ang magmahal?,Description
 Kailan mo kaya ako mamahalin?,Description
 Sino ba siya sa buhay mo?,Description
-Alin sa aming dalawa ang gusto mong makasama? Ako o siya?,Human
+"Alin sa aming dalawa ang gusto mong makasama, Ako o siya?",Human
 Saan ka nga ba nakatira?,Location
 "Sino ang pipiliin ko, mahal ko o mahal ako?",Human
 Sino kaya senyora sa buhay ni Marimar?,Human
@@ -2368,13 +2380,13 @@ Alin sa mga bagay na ito ang hindi sayo? ,Entity
 Saan ako makakabili ng sapatos na mura? ,Location
 Saan ka ba pupunta? ,Location
 Saan ang lokasyon ng Pilipinas? ,Location
-Ano ang ibig sabihin ng pagmamahal? <press Enter>,Description
-Bakit mo ako iniwan? <press Enter>,Description
-Paano mo ba ako matutulungan sa lagay mong ganyan? <press Enter>,Description
-Kailan pa ba ikaw gagraduate? <press Enter>,Numeric
-Sino ang crush mo sa UP? <press Enter> ,Human
-Alin sa kanila ang nagustuhan mo? <press Enter>,Human
-Saan ba naabot ang 20 pesos mo? <press Enter>,Entity
+Ano ang ibig sabihin ng pagmamahal?,Description
+Bakit mo ako iniwan?,Description
+Paano mo ba ako matutulungan sa lagay mong ganyan?,Description
+Kailan pa ba ikaw gagraduate?,Numeric
+Sino ang crush mo sa UP?,Human
+Alin sa kanila ang nagustuhan mo?,Human
+Saan ba naabot ang 20 pesos mo?,Entity
 Ano na naman ang gagwin mo sa Cebu?,Entity
 "Ano ba talaga ang bet mo, ako o siya?",Human
 Ano kaya ang nangyari sa Ibong Adarna?,Description
@@ -2559,3 +2571,510 @@ Sino ang kumuha ng pera ko?,Human
 Sino ka para pagalitan ako?,Description
 Sino ang pumatay sa aso ko?,Entity
 Alin sa kanila ang gwapo?,Entity
+Alin sa mga sapatos ang susuotin mo?,Entity
+Alin sa kanila ang umubos sa pagkain?,Human
+Saan ka pupunta?,Location
+Saan mo binili ang sapatos mo?,Location
+Saan tayo kakain?,Location
+Ano ang pangalan mo?,Human
+Bakit ka ba nabubuhay?,Description
+Paano ang tao kung walang Diyos?,Description
+Kailan ka ba naging masaya?,Description
+Sino ang nagpapasaya sa iyo?,Human
+Alin sa mga kaibigan mo ang totoo?,Human
+Saan mo inilagay ang pagkain ko?,Location
+Ano ang halaga ng buhay ko sa mundong 'to?,Description
+Ano ang sagot sa tanong kung bakit ka mahalaga?,Description
+Ano ang ibig sabihin ng LMAO?,Abbreviation
+Bakit ngayon ka lang?,Description
+Bakit hindi nalang totohanin ang lahat?,Description
+Bakit nag hiwalay si Angelina Jolie at Brad Pitt?,Description
+Paano na kaya?,Description
+Paano nabuo ang buong sanlibutan sa loob ng pitong araw?,Description
+Paano maging kasing yaman ni Henry Sy?,Description
+Kailan kaya mapapansin ang aking lihim?,Description
+Kailan kaya kami ikakasal ng mahal ko?,Description
+"Kailan kaya mauubos ang mga ""addict"" sa Pilipinas?",Description
+Sino ang iibigin ko?,Human
+Sino ang aakay sayo?,Human
+Sino ang nanay mo?,Human
+Alin dito ang naiiba?,Entity
+Alin ang mas maganda?,Entity
+Alin dito ang pinaka paborito ni Imelda?,Entity
+Saan ka pupunta?,Location
+Saan kita makikita?,Location
+Saan tayo magtatagpo?,Location
+Ano ang pag ibig?,Description
+Ano ang kailangan para sa pag gawa ng mango float?,Entity
+Ano sa tagalog ang toothpaste?,Description
+Ano ang ako sayo?,Description
+Ano ang kinalaman ni de lima sa kaso mo?,Description
+Bakit di ka pinapansin ng crush mo?,Description
+Bakit mabilis ang oras pag kasamo mo siya?,Description
+Bakit kailangan mag away?,Description
+Bakit mayroong titser na masungit?,Description
+Bakit kailangan ang thesis?,Description
+Paano gumawa ng bata?,Description
+Paano pumunta sa europa?,Description
+Paano sumipa ng bola?,Description
+Paano namatay si rizal?,Description
+Paano pumasa ng thesis?,Description
+Kailan ang tamang panahon?,Description
+Kailan ka pinaganak?,Numeric
+Kailan mo ako sasagotin?,Numeric
+Kailan nangyari ang pagdating ni magellan?,Numeric
+Kailan ako maka graduate?,Numeric
+Sino ba siya?,Human
+Sino ang tunay na tanga?,Human
+Sino ang punong hurado ng tawag ng tanghalan?,Human
+Sino si cristiano ronaldo?,Human
+Sino ang tutulong sa thesis mo?,Human
+Alin ang mas masarap na kape?,Entity
+Alin ang pinakamahirap na tanong?,Entity
+"Alin ang pinakamatamis na asukal, brown or white?",Entity
+Alin ang pinakamayaman na bansa?,Entity
+Alin ang pinakamasarap na pakiramdam sa mundo?,Entity
+Saan kumuha ng lapis?,Location
+Saan ang pinakamalaking syudad sa pilipinas?,Location
+Saan mo ako unang nakilala?,Location
+Saan matatagpuan ang puso?,Location
+Saan nakatira si batman?,Location
+Ano ba ang papel ko sa buhay mo?,Description
+Ano ba ang nalalaman mo?,Description
+Ano ang ibig mong sabihin?,Description
+Bakit mo pa kailangang gawin ito?,Description
+Bakit hindi mo masabi na hindi mo na kaya?,Description
+Bakit ba tinitiis mo ang lahat?,Description
+Paano ko susuklian ang lahat ng nagawa mo?,Description
+Paano mo isasauli iyan?,Description
+Paano mo ipapakita na mahal mo ang ating likas na yaman?,Description
+Kailan ang iyong kaarawan?,Numeric
+Kailan nangyari ang aksidente?,Numeric
+Kailan mo nalaman na may taning na ang buhay mo?,Description
+"Sino ang pipiliin mo, siya o ako?",Human
+Sino ba siya sa buhay mo?,Description
+Sino ba naman ako para paniwalaan mo?,Description
+Alin dyan ang gusto mo?,Entity
+Alin ang mas bagay sa akin?,Entity
+Alin sa mga ito ang tama?,Entity
+"Saan ka mas masaya, sa taong mahal ka o sa taong mahal mo?",Human
+Saan mo dapat ilagay ang sarili mo sa buhay nya?,Location
+Saan makikita ang pinakamalaking mall sa Asya?,Location
+Ano ang pinagkaiba mo sa pangit?,Description
+Ano ang dapat mong sabihin sa lalaking/babaeng nangbasted sa iyo?,Description
+Ano ba ang tamang sagot sa tanong na ito?,Description
+Bakit kailangan mong maligo kung mabaho parin ang hininga mo?,Description
+Bakit importante ang pag-ibig?,Description
+Bakit ka maganda kung may mas maganda pa sa iyo?,Description
+Paano mo sasabihin sa crush mo na crush mo siya kung may boyfriend/girlfriend ka na?,Description
+Paano ka makakapag move-on?,Description
+Paano mo malalaman kung okay. a kayo ng kaibigan mo?,Description
+Kailan ako yayaman?,Numeric
+Kailan tatanggapin ng lipunan ang mga baliw sa pag-ibig?,Numeric
+Kailan magkaka-asawa si Jeon Jungkook?,Numeric
+"Sino ang mas mahalaga, ang ex-boyfriend mo o ang ex-husband ng nanay mo?",Human
+Sino si Apolinario Mabini?,Human
+Sino ang pambansang heartthrob?,Human
+"Alin ang pipiliin mo, Kalabaw o kalaguyo?",Entity
+Saan matatagpuan ang pinakamalaking bulaklak sa Pilipinas?,Location
+Saan mo makikita ang iyong true love?,Location
+Saan maaaring kumain ng mais?,Location
+Ano ang pangalan mo?,Human
+Ano ang gusto mong kainin?,Entity
+Ano ang paborito mong kanta?,Entity
+Bakit ngayon kalang dumating?,Description
+Bakit palagi mo akong hinahanap?,Description
+Bakit siya ang pinili mo?,Description
+Paano mo patutunayan na mahal mo ako?,Description
+Paano pumunta sa SM?,Description
+Paano mo ako liligawan?,Description
+Kailan kita pwedeng makasama?,Description
+Kailan mo ba ako sasagutin?,Description
+Kailan ko masasabing mahal kita?,Description
+Sino ang mahal mo?,Human
+Sino ang kumanta ng kantang to?,Human
+Sino ang gusto mong makita?,Human
+Alin dito ang gusto mo?,Entity
+Alin ang nararapat sa akin?,Entity
+Alin ang mura dito?,Entity
+Saan kita makikita?,Location
+Saan tayo pwedeng mag usap?,Location
+Saan tayo pupunta?,Location
+Anong ang pangalan mo?,Entity
+Ano ang kailangan mo sa kanya?,Entity
+Ano ang bitbit mo kahapon sa skwelahan?,Entity
+Bakit mahalaga ang pera?,Description
+Bakit ka kumain ng ganoon?,Description
+Bakit hatinggabi kana umuwi?,Description
+Paano mo masasabing mahal mo siya?,Description
+Paano ko kaya sasabihin ang nararamdaman ko sa kanya?,Description
+Paano ba to gawin?,Description
+Kailan ka uuwi?,Description
+Kailan ka papasok?,Description
+Kailan ba niya kukunin ang pinamili niya?,Numeric
+Sino ang pinaka close mo?,Human
+Sino ang pinagsabihan mo neto?,Human
+Sino kaya ang kasama niya kahapon?,Human
+Alin ang mas mainam kainin sa dalawa?,Entity
+Alin ang mas pipiliin mo?,Entity
+Alin ang pinaka masarap sa tatlo?,Entity
+Saan ka pupunta?,Location
+Saan kayo mamamasyal?,Location
+Saan ba ninyo balak magpakasal?,Location
+Ano ang paborito mong pagkain?,Entity
+Anong tatak na sapatos yung gusto mo?,Entity
+Ano ang kahalagahan nang buhay ko kung wala ka?,Description
+Bakit mahilig ka magbasa nang mga libro?,Description
+Bakit siya ang pinili mo?,Description
+Bakit hindi ako?,Description
+Paano ba magmahal?,Description
+Paano ako maging katulad mo?,Description
+Paano mo ginawa yun?,Description
+Kailan ba ako matutong magpatawad?,Numeric
+Kailan ang pagtitipon ng grupo natin?,Numeric
+Kailan ang kaarawan mo?,Numeric
+Sino sa kanila ang gusto mong ligawin?,Human
+Sino ang nagtuturo nang Pilipino sa ating klase?,Human
+Sino siya?,Human
+Alin sa aming dalawa ang mas mahusay?,Human
+Alin dito ang mas maganda?,Entity
+Alin dito ang mas mura?,Entity
+Saan ka galing?,Location
+Saan ka papunta?,Location
+Saan ko makita ang aking pamangkin? ,Location
+Ano ang kahulugan ng kanyang pag-iyak?,Description
+Ano ang hinihingi niyang kapalit sa pagtulong mo?,Description
+Ano ang tema ngayong Intramurals?,Description
+Bakit naipasa ang death penalty?,Description
+Bakit pinatay si Rizal ng mga Kastila?,Description
+Bakit kailangang mag-aral ng mabuti?,Description
+Paano maging katulad ni Rizal?,Description
+Paano gumawa ng Frozen Bananas?,Description
+Paano maging isang responsableng estudyante?,Description
+Kailan ang UP Intramurals?,Numeric
+Kailan mo ako babalikan?,Numeric
+Kailan ang Board Exam sa mga abogado?,Numeric
+Sino ang pambato natin sa Miss Universe 2016?,Human
+Sino ang nagpaiyak sa iyo?,Human
+Sino ang paborito mong Korean actor?,Human
+"Alin sa dalawa ang pipiliin mo, ang bag o ang sapatos?",Entity
+Alin sa naka-display na damit ang bibilhin mo?,Entity
+Alin sa mga damit mo ang hindi na kasya sa iyo?,Entity
+Saan kayo mag-oovernight?,Location
+Saan sa Bohol matatagpuan ang Tarsier?,Location
+Saan tayo pupunta pagkatapos ng graduation?,Location
+Ano ang pangalan mo?,Human
+Ano ang misyon mo sa buhay?,Description
+Ano ang gusto mong maging? ,Description
+Bakit ka ganyan?,Description
+Bakit marahas ang iba?,Description
+Bakit iba ang bawat isa?,Description
+Paano maging ikaw?,Description
+Paano mag-download ng Photoshop C6 na kompleto?,Description
+Paano maging magaling na computer scientist?,Description
+Kailan ang iyong kaarawan?,Numeric
+Kailan tayo magkikitang muli?,Numeric
+Kailan mo siya babalikan?,Numeric
+Sino ka?,Human
+Sino ang iyong idolo?,Human
+Sino ang pinakamagaling sa inyong tatlo?,Human
+Alin sa dalawang manliligaw mo ang gusto mo?,Human
+Alin sa tatlo ang sagot?,Entity
+Alin ang pipiliin mo?,Entity
+Saan ka pupunta?,Location
+Saan ka mag-aaral?,Location
+Saan ka magbabakasyon?,Location
+Ano ang pangalan mo?,Human
+Ano ang ibig sabihin ng DOH?,Abbreviation
+Ano ang paborito mong ulam?,Entity
+Bakit kaya ang ganda ko?,Description
+Bakit naka-ikis ang noo mo?,Description
+Bakit ka umiiyak?,Description
+Paano ka makakamove-on kung palagi mo pa rin siyang sinasali mga usapan?,Description
+Paano mo igagastos ang twenty pesos mo?,Description
+Paano ba mabuhay nang mapayapa?,Description
+Kailan mo ba mapapansin ang aking lihim?,Numeric
+Kailan mo planong bumitiw sa pagdodroga?,Numeric
+Kailan ka nagsimula sa iyong thesis?,Numeric
+Sino yang kasama mo?,Human
+Sino ang nagpapatibok ng puso mo?,Human
+Sino ang unang taong napasok sa isip mo sa tanong na ito?,Human
+"Alin ang mas gusto mo, pizza o burger?",Entity
+Alin ang naiba?,Entity
+Alin dito ang mas mura?,Entity
+Saan ka papunta?,Location
+Saan tayo magde-date?,Location
+Saan kayo nagkita?,Location
+"Ano ang ibig sabihin ng ""i.e""?",Abbreviation
+"Ano ang direksyon ng Argao kung nanggaling ka sa Lahug, Cebu City?",Location
+Ano ang kanyang ginagawa sa plaza?,Description
+Bakit mahal ang brand na adidas?,Description
+Bakit ba sobrang uso ngayon ng mga umaasa?,Description
+Bakit maliit pa rin si Edogawa Conan?,Description
+Paano naging pula ang mansanas?,Description
+Paano ba ang magmahal?,Description
+Paano ang papuntang Africa?,Description
+Kailan ang kaarawan ni Faye?,Numeric
+Kailan naimbento ang mga numero?,Numeric
+Kailan nadiskubre ang Pilipinas?,Numeric
+Sino ba ang mga may galit sa kanya?,Human
+Sino ang pumunta ng Japan?,Human
+Sino ang may-ari ng Brand X?,Human
+Aling parte ng lechong manok ang paborito ni Marcos?,Entity
+Aling lugar ang puno ng dragon balls?,Location
+Alin sa mga kasinungalingan ang naturing nang katotohanan? ,Description
+Saan nanggaling si Kaneki Ken?,Location
+Saan naliligo si Ariel the mermaid?,Location
+Saan nagtungo si Kuro?,Location
+Ano ba ang dapat kong gawin sa sitwasyon na ito?,Description
+Ano ang ibig sabihin ng LOL?,Abbreviation
+Ano nga ba ako sa buhay mo?,Description
+Bakit masama ang ugali mo?,Description
+Bakit mahal mo siya?,Description
+Bakit siya ang pinili mo?,Description
+Paano ba ang magmahal?,Description
+Paano mo nakakaya ang lahat ng ito?,Description
+Paano pala kung mawala siya sa buhay mo?,Description
+Kailan ka magiging masaya?,Numeric
+Kailan ka matutoto sa pagkakamali mo?,Numeric
+Kailan ang kaarawan mo?,Numeric
+Sino siya sa buhay mo?,Description
+Sino ang nagpapasaya sayo ngayon? ,Human
+Sino ang ka-date mo ngayong Valentines Day?,Human
+"Alin ang mas maganda, Loreal o Tresemme?",Entity
+"Alin ang mas matimbang, mahal mo o mahal ka?",Description
+"Alin ang mas nakabubuti, ang bumitaw nalang o ang ipaglaban ang nararamdaman mo?",Description
+Saan ka ipinanganak?,Location
+Saan mo siya nakilala?,Location
+Saan mo gustong ikasal?,Location
+Ano ang gusto mong sabihin?,Description
+Ano ang iyong pangalan?,Human
+Ano ako para sa iyo?,Description
+Bakit mo ako iniwan?,Description
+Bakit hindi ko matanggap na walang tayo?,Description
+Bakit ako baliw sa iyo?,Description
+Paano mo ako nagawang lokohin?,Description
+Paano ko sasabihin ang aking nararamdaman?,Description
+Paano maging sayo?,Description
+Kailan mo sasabihing importante ako sa buhay mo?,Numeric
+Kailan mo ba mapapansin ang aking  lihim?,Numeric
+Kailan tayo magkikitang muli?,Numeric
+Sino nga ba sya sa buhay mo?,Description
+"Sino ang pipiliin ko, mahal ko o mahal ako?",Description
+Sino ka para lokohin ako?,Description
+Alin sa mga pambobola nya ang pinaniwalaan mo nang husto?,Description
+"Alin ang mas maganda, maging ikaw at ako o maging tayo?",Description
+Alin sa mga katangahan mo ang pinakamatindi?,Entity
+Saan mo ako dadalhin?,Location
+Saan tayo kakain?,Location
+Saan ako maghihintay?,Location
+Ano ba talaga tayo?,Description
+Ano sa palagay mo ang dapat?,Description
+Ano ang ibig sabihin ng smh?,Abbreviation
+ Bakit madamot ang kaibigan ko?,Description
+Bakit ang hirap ng mathematics?,Description
+Bakit ang bulakbol ko mag-aral?,Description
+Paano ko to lulutasin?,Description
+Paano ko hahanapin?,Description
+Paano na kung wala ka?,Description
+Kailan kaya mapapansin ang aking lihim?,Numeric
+Kailan mo kaya ako tatanggapin?,Numeric
+Kailan pa ba ang susunod na lunar eclipse?,Numeric
+"Sino ba ang pipiliin ko, mahal ko o mahal ako?",Description
+Sino kaya ang magiging susunod na presidente?,Human
+Sino ba talaga ang nagpatay ni Ninoy Aquino?,Human
+Alin sa sumusunod ang tamang sagot?,Entity
+"Alin ang pipilin mo, matalino na baduy o bulakbol na gwapo?",Entity
+Alin dito ang mas kaaya-aya?,Entity
+Saan ko mamahanap ang hinahanap ko?,Location
+Saan ba kita hahanapin?,Location
+Saan ba ang Calle Crisologo?,Location
+Ano ang ibig sabihin ng GGWP?,Abbreviation
+Ano ang paborito mong pagkain?,Entity
+Ano ang pangalan ng iyong aso?,Entity
+Bakit bigla kang nawala?,Description
+Bakit hindi mo kamukha ang iyong kakambal?,Description
+Bakit ang hilig mong mang'iwan?,Description
+Paano ba ang magmahal?,Description
+Paano mo nalaman na totoo ang sinabi niya?,Description
+Paano ba gawin ang magmove'on?,Description
+Kailan ka matatauhan na hindi ka na niya mahal?,Numeric
+Kailan ka aalis?,Numeric
+Kailan siya nagpakamatay?,Numeric
+Sino ang pinalit mo sa akin?,Human
+Sino siya sa buhay mo?,Human
+Sino ang nagsabi sa'yo?,Human
+Alin ang mas mahalaga para sa'yo? ,Entity
+Alin dito ang kulay asul?,Entity
+Alin ang mas mabigat? ,Entity
+Saan mo ko dadalhin?,Location
+Saan patungo ang daan na ito?,Location
+Saan ka titira?,Location
+Ano ang kahulugan ng pag-ibig?,Description
+Bakit mo pa siya mahal kung nandito naman ako?,Description
+Paano makalimot?,Description
+Kailan ka pa magmomove on?,Numeric
+Sino ba talaga ang mahal mo?,Human
+Alin sa'min ang mas mahal mo?,Human
+Saan ba 'ko lulugar sa buhay mo?,Location
+Ano ang sinisigaw ng puso mo ngayon?,Description
+Ano ang gusto mong sabihin sa kanya pero di mo masabi-sabi?,Description
+Ano ang katangiang gusto mo sa isang lalaki? ,Description
+Bakit mahirap kang mahalin?,Description
+Bakit nga ba mahal kita kahit na may mahal ka ng iba?,Description
+Bakit nagpapakatanga ang mga tao sa pag-ibig?,Description
+Paano mo maitatama ang lahat ng kasalanan mo?,Description
+Paano pa magiging masaya uli ang puso kong ito? ,Description
+Paano ba ang magmahal?,Description
+Kailan ka pinanganak?,Numeric
+Kailan ba ang lakad nating dalawa?,Numeric
+Kailan kayo huling nagkausap ng masinsinan ng nanay mo?,Numeric
+Sino ang pinakamahalagang tao para sa iyo?,Human
+Sino ang una mong tatakbuhan sa oras ng kagipitan?,Human
+Sino ang taong hinding hindi mo makakalimutan?,Human
+Alin sa mga minahal mo ang sobra kang nasaktan?,Entity
+Alin sa mga miyembro ng iyong barkada ang pinakamalapit sa'yo?,Human
+Alin sa lahat ng nangyari sa buhay mo ang pinakamasakit?,Entity
+Saan ka pinanganak?,Location
+Saan pa ba tutungo ang pag-ibig nating mahirap nang ipaglaban?,Location
+Saan tayo magsisimula uli? ,Location
+Ano ba ang paborito mong pagkain?,Entity
+Ano ang hinahanap mo sa isang babae?,Description
+Ano ang nagustuhan mo sa kanya?,Description
+Bakit ba hindi pwede?,Description
+Bakit hindi mo ako nakikita?,Description
+Bakit siya ang pinili mo?,Description
+Paano mo siya niligawan?,Description
+Paano mo kinaya ang course mo?,Description
+Paano mo nalampasan ang mga pagsubok sa buhay?,Description
+Kailan mo ba papansin ang aking lihim?,Numeric
+Kailan mo binili ang iyong bag?,Numeric
+Kailan ka pupunta sa probinsya?,Numeric
+Sino ang mahal mo?,Human
+Sino ang pipiliin mo?,Human
+Sino ang nagbigay sa iyo nga kwintas?,Human
+Alin sa mga regalong natanggap mo ang pinakagusto mo?,Entity
+Alin sa amin ang gusto mo?,Human
+Alin sa mga nakasulat sa kahon ang tama?,Entity
+Saan mo gustong mamasyal?,Location
+Saan mo gustong magpakasal?,Location
+Saan kayo nakabili ng sapatos na iyan?,Location
+Ano ang kinain mo kaninang umaga?,Entity
+Bakit nga ba mahal kita?,Description
+Paano naghiwa-hiwalay ang mga kontinente na nooy iisang kontinente (Pangea) lang?,Description
+Kailan mo ba ako sasagutin?,Description
+Sino kaya ang magiging Miss Universe ngayong taon?,Human
+"Alin ang mas malapit sa puso mo, Aso o pusa? ",Entity
+Saan tatanghalin ang Miss Universe? ,Location
+Ano ang iyong pangalan?,Human
+Ano iyang dala mo?,Entity
+Ano ba ako sa iyo?,Description
+Bakit nga ba mahal kita?,Description
+Bakit ako mahihiya? ,Description
+Bakit kayo nandito?,Description
+Paano na lamang ako?,Description
+Paano na ang thesis ko?,Description
+Paano ka nakarating dito?,Description
+Kailan ka ba uuwi?,Numeric
+Kailan mo iyan kakainin?,Numeric
+Kailan mo ako papakainin?,Numeric
+Sino ba talaga ako?,Description
+Sino yang kasama mo?,Description
+Sino ka ba sa buhay niya?,Description
+Alin ang naiba?,Entity
+Alin diyan ang bibilhin mo?,Entity
+Alin sa kanila ang pipiliin mo?,Human
+Saan tayo pupunta?,Location
+Saan ka ba nanggaling?,Location
+Saan ba ito patungo?,Location
+"Ano ang Tagalog ng ""cat""?",Description
+Ano ang tawag sa taong walang magawa?,Description
+Ano ang masasabi mo sa isyu ng Climate Change?,Description
+Bakit may mga taong baliw?,Description
+Bakit ayaw ko sa kanya?,Description
+Bakit hindi mabuting asal ang magsinungaling?,Description
+Paano mo mapapa-ibig sa iyo ang isang taong wala naming gusto sa iyo?,Description
+Paano ba kumanta ng Korean na kanta?,Description
+Paano ba maging isang mabuting manunulat?,Description
+Kailan mo ako mamahalin?,Numeric
+Kailan mo pa ba siya sasagutin?,Numeric
+Kailan ba aalis ang mga estranghero sa bansang ito?,Numeric
+"Sino ang kumanta ng ""May Bukas Pa""?",Human
+Sino sa inyo ang marunong sumayaw?,Human
+Sino sa kanila ang mananalo?,Human
+Alin sa kanila ang aanyayahin mo sa kasal ni Faie?,Human
+Alin dito ang hindi nabibilang sa grupo?,Entity
+Alin sa mga ito ang gusto mong bilhin?,Description
+Saan ba dapat ako pumunta kung ako ay nagugutom?,Location
+Saan nakatira si Faie?,Location
+Saan nag-iistambay si Oble?,Location
+Ano ang ibig sabihin ng IRRI?,Abbreviation
+Ano ang mga patakaran ng larong Chinese Garter?,Description
+Ano ang gawain ng isang guro?,Description
+Bakit isa lang ang pwedeng maging asawa ng isang tao?,Description
+Bakit buhay ang tawag sa hindi patay?,Description
+Bakit maitim ang uwak?,Description
+Paano pumunta ng Maynila?,Description
+Paano ba mag-ayos ng gripo?,Description
+Paano magkaroon ng magandang girlfriend?,Description
+Kailan ka pa uuwi?,Numeric
+Kailan ang exam?,Numeric
+Kailan ka matatapos?,Numeric
+Sino si Kokey?,Human
+Sino ang professor mo?,Human
+Sino ang pangulo natin?,Human
+Alin ang naiba?,Entity
+Alin diyan ang gusto mo?,Entity
+Alin sa mga damit ang kukunin mo?,Entity
+Saan ka pupunta?,Location
+Saan ang palaruan dito?,Location
+Saan banda ang Labangon?,Location
+Ano nga ba ang tamang kasagutan sa katanungang ito?,Description
+Ano ang sabi ng isang doctor sa kanyang pasyenteng pila?,Description
+Ano ang kahalagahan ng buhay kung walang tunay na pag-ibig?,Description
+Ano sa tingin mo ang panglaban natin sa kampon ng kadiliman?,Description
+Bakit natin minamahal ang mga taong di tayo kayang mahalin?,Description
+Bakit mahirap manalo sa isang beauty pageant?,Description
+Bakit magkaiba ang pribilehiyo ng mga may pera at ng mga kabos?,Description
+Bakit sinasayang ng ibang tao ang kanilang buhay?,Description
+Paano ba natutukoy ang tunay na intensyon ng isang tao?,Description
+Paano natin mailalahad ang katotohanan kung may hadlang sa pakay natin?,Description
+Paano mo ipapakita na mahal mo siya?,Description
+Paano niya nagawang magtaksil sa kanyang pamilya?,Description
+Kailan natin maihahandog ang kagandahan ng ating bansa sa mundo?,Description
+Kailan ba mapapatawad ang taong nagtaksil sa iyong puso?,Description
+Kailan mo pakikinggan ang mga hinaing ng taong bayan?,Numeric
+Kailan ba siya magpapakita sa hukumang ito?,Numeric
+Sino ang tatawagin ko kapag wala ka?,Description
+Sino ang mananagot sa kalapastangang nangyari dito?,Human
+Sino ba ang may-ari ng sasakyang ito?,Human
+Sino ang magiging reyna ng taong ito?,Human
+Alin ba ang kanila ang mas magara?,Entity
+Alin sa apat na estudyante ang pinakamahusay kumanta?,Human
+Alin sa amin ang karapatdapat na maging presidente ng kompanya?,Human
+Alin ba sa mga bagaheng ito ang sa iyo?,Entity
+Saan matatagpuan ang tunay na kaligayahan?,Location
+Saan tutungo upang makamit ang tagumpay?,Location
+Saan natin madadama ang haplos ng tunay na pag-ibig?,Location
+Saan ba ang bahay nila Lee Min Ho at Song Joong-ki?,Location
+Ano ang sagot mo sa tanong ko?,Description
+Ano ang nangyari sa atin?,Description
+Ano ang ibig sabihin ng nakita ko?,Description
+Bakit ka pa nakita?,Description
+Bakit ka pa nakilala?,Description
+Bakit di pa kunin ng alien ang mga tao?,Description
+Paano ko sasabihin?,Description
+Paano ko aaminin?,Description
+Paano pag nalaman mo?,Description
+Kailan hahaplusin ang pusong bitin na bitin?,Numeric
+Kailan mo kaya ako mapapansin?,Numeric
+Kailan matatapos ang hindi pa nasimulan?,Numeric
+"Sino ang iibigin ko, mahal ko o mahal ako?",Human
+Sino ba sila?,Human
+Sino ang baliw?,Human
+Alin ang naiba?,Entity
+Alin ang natira?,Entity
+Alin ang nawala?,Entity
+Saan makikita ang wala?,Location
+Saan tayo magtatagpo?,Location
+Saan tayo makakarating?,Location
