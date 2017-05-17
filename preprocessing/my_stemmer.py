@@ -94,10 +94,11 @@ def format_data(input, output):
     input_file = input
     output_file = output
     csv_f = csv.reader(input_file)
-    ctr = 1
+    ctr = 0
 
     for row in csv_f:
-        if ctr == 1:
+        # print row
+        if ctr == 0:
             ctr+=1
         else:
             for column in range(0, len(row)-1):
@@ -109,17 +110,20 @@ def format_data(input, output):
                         output_file.write("\n")
                         output_file.write("?")
                         output_file.write("\n")
+                        # ctr += 1
                     elif word != "":
                         # print(word)
                         output_file.write(word)
                         output_file.write("\n")
+
+    # print ctr
 
     input_file.close()
     output_file.close()
 
 
 def  write_to_file(stemmed_data):
-    output_file = open(os.path.abspath('files/additional.in'), 'w')
+    output_file = open(os.path.abspath('files/dataset_pos.in'), 'w')
     # print(stemmed_data)
 
     for dict in stemmed_data:
@@ -139,21 +143,35 @@ def  write_to_file(stemmed_data):
     output_file.close()
 
 
+def count_qmark(file):
+    text = file.readlines();
+    ctr = 0
+
+    for line in text:
+        # if line.count("?") < 1:
+        #     print line
+        if "?" in line:
+            ctr+=1
+
+    print ctr
+    file.close()
+
+
 def main():
     """
     Rearrange the data into vertical sentences.
     Each sentence ending with a questions mark
     """
-    # input = open(os.path.abspath('files/labelled_data.csv'))
-    # output = open(os.path.abspath('files/dataset_pos.in'), 'w+')
-    # format_data(input, output)
+    input = open(os.path.abspath('files/labelled_data.csv'))
+    output = open(os.path.abspath('files/dataset_pos.in'), 'w+')
+    format_data(input, output)
+    # count_qmark(input)
 
     """
     The output file of format_data() will be read.
     And each word is stemmed.
     """
-    # wordfile = open(os.path.abspath('files/stem_words_test.txt'))
-    wordfile = open(os.path.abspath('files/additional.in'))
+    wordfile = open(os.path.abspath('files/dataset_pos.in'))
 
     stemmed_data = list()
 
@@ -199,4 +217,5 @@ def main():
 
 
 if __name__ == "__main__":
+    # count_qmark(open(os.path.abspath('files/dataset_pos.in')))
     main()

@@ -6,40 +6,6 @@ import re
 import numpy as np
 from sklearn.feature_extraction import DictVectorizer
 
-
-def extract(input, output):
-
-	csv_f = csv.reader(input)
-	wr = csv.writer(output, delimiter=',', quoting=csv.QUOTE_ALL)
-
-	wr.writerow(["Questions", "Category"])
-
-	for row in csv_f:
-		for column in range(2, len(row)):
-			if row[column].count(":") == 0:
-				row_items = (row[column].split('\n'))
-				row_items = delete_empty_string(row_items)
-				print ("row_item: ", row_items)
-				wr = csv.writer(output, delimiter='\n', quoting=csv.QUOTE_ALL)
-				wr.writerow(row_items)
-
-
-def delete_empty_string(my_list):
-
-	for item in my_list:
-		if len(item) == 0 or item == " ":
-			my_list.remove(item)
-
-		if re.match("^[0-9]", item) != None:
-			index = my_list.index(item)
-			tmp = item.lstrip('0123456789.- ')
-			my_list.remove(item)
-			my_list.insert(index, tmp)
-			print item
-
-	return my_list
-
-
 def sentence_to_object(file):
 
     text = file.readlines();
@@ -55,9 +21,12 @@ def sentence_to_object(file):
             pos = get_tags(pos, 1)
             dict[word] = pos.strip()
         elif data[0] == '?':
-            ctr += 1
             array.append(dict)
             dict = {}
+        ctr += 1
+
+    print ctr
+    # print array
     
     return array	
 
@@ -95,7 +64,7 @@ def transform(data):
 
 
 def to_numerical():
-    input_file = open(os.path.abspath('files/pos_tagging.out'))
+    input_file = open(os.path.abspath('files/dataset_pos.out'))
     #sentence_to_object(input_file)
     data = []
     
@@ -109,8 +78,8 @@ def to_numerical():
     print X
 
 
-def category_vector():
-    input_file = open(os.path.abspath('files/labelled_data.csv'))
+def category_vector(file):
+    input_file = file
     csv_f = csv.reader(input_file)
 
     cat = []
@@ -141,12 +110,26 @@ def count_qmark(file):
 	for line in text:
 		if line.count("?") > 2:
 			print line
+    
+
+def pos_vec(file):
+    input_file = file
+    data = []
+    
+    data = sentence_to_object(input_file)
+    # print data
+    data = transform(data)
+    
+    input_file.close()
+    
+    return data
 
 
 def get_wh_question(file):
     reader = csv.reader(file)
     
-    wh_word = {'alin':1, 'saan':2, 'ano':3, 'kailan':4, 'paano':5, 'sino':6, 'bakit':7 }
+    q_word_tags = {'alin':1, 'saan':2, 'ano':3, 'kailan':4, 'paano':5, 'sino':6, 'bakit':7 }
+    q_words = {'aling', 'alin-alin', 'alin-aling', 'saang', 'saan-saan', 'nasaan', 'nasaang', 'anong', 'anu-ano', 'anu-anong', 'inaano', 'paanong', 'papaano','papaanong', 'sinong', 'sinu-sino', 'sino-sinong', 'kailang'}
     
     vec = []
     
@@ -156,53 +139,34 @@ def get_wh_question(file):
         temp = []
 
         for word in sentence:
-            if word.lower() in wh_word:
-                temp.append(wh_word[word.lower()])
+            if word.lower() in q_word_tags:
+                # print word.lower()
+                temp.append(q_word_tags[word.lower()])
                 vec.append(temp)
                 break
-            elif "-" in word.lower() and word.lower().split("-")[0] in wh_word:
-                w = word.lower().split("-")
-                print w
-                temp.append(wh_word[w[0]])
-                vec.append(temp)
-                break
-            elif word.lower() == "nasaan" or word.lower() == "papaano":
-                print word.lower()
-                temp.append(wh_word[word.lower()[2:]])
-                vec.append(temp)
-            else:
-                print "No wh-question word!", sentence
+            elif word.lower() in q_words:
+                for key in q_word_tags:
+                    if key in word.lower():
+                        temp.append(q_word_tags[key])
+                        vec.append(temp)
+                        break
         
-#     print vec
+    # print vec
     
     return vec
-    
 
-def pos_vec(file):
-    input_file = file
-    data = []
-    
-    data = sentence_to_object(input_file)
-    data = transform(data)
-    
-    input_file.close()
-    
-    return data
 
 
 def main():
-	# input_file = open(os.path.abspath('files/Help a CS Student Graduate.csv'))
-	# output_file = open(os.path.abspath('files/cleaning_output.csv'), 'w')
-	# extract(input_file, output_file)
-	# input_file.close()
-	# output_file.close()
+    pos_data = pos_vec(open(os.path.abspath('files/dataset_pos.out')))
+    wh_vector = get_wh_question(open(os.path.abspath('files/labelled_data.csv')))
+    category = category_vector(open(os.path.abspath('files/labelled_data.csv')))
 
-	# input_file = open(os.path.abspath('files/pos_tagging.out'))
-	# sentence_to_object(input_file)
-	# to_numerical()
-	# category_to_vector()
-	count_qmark(open(os.path.abspath('files/labelled_data.csv')))
+    print "Data Length: ", len(pos_data)
+    print "Wh_Question Length: ", len(wh_vector)
+    print "Category Length: ", len(category)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
+    # count_qmark(open(os.path.abspath('files/dataset_pos.out')))

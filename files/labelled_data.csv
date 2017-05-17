@@ -2,8 +2,8 @@ Questions,Category
 Anong kailangan kong gawin upang malaman mo na ikaw ang minamahal ko?,description
 Anong sinasabi mo?,description
 Anong meron siya na wala ako?,description
-Bakit ba hindi ka nakilala nang akoy malana bitin?ya.ihi pa?,description
-Bakot ako mahihiya kung sa iyo ako liligaya?,description
+Bakit ba hindi ka nakilala nang akoy malana pa?,description
+Bakit ako mahihiya kung sa iyo ako liligaya?,description
 Bakit ba ayaw mo sa akin?,description
 "Paano na ako, mahal ko?",description
 Paano ba ito gagawin?,description
@@ -21,7 +21,7 @@ Saan ako nagkamali?,numeric
 Saan nagkamali ang puso ko?,numeric
 Saan ka nagpunta?,location
 Ano ka?,description
-Ano'ng kailangan mo?,description
+Anong kailangan mo?,description
 Ano ba ako sa'yo?,human
 Bakit ngayon ka lang?,numeric
 Bakit ang ganda ko?,description
@@ -201,12 +201,10 @@ Bakit ka nahuli?,numeric
 Paano ba sumakay ng jeep?,description
 Paano ako makakabawi sa iyo?,description
 Paano gumawa nang parol?,description
-Kailangan ba akong pumunta sa inyo?,numeric
-Kailangan mo ba akong saktan?,description
-Kailangan ba ng halaman ang maraming tubig?,description
+Kailan ba akong pumunta sa inyo?,numeric
 Sino ba ako  sa buhay mo?,human
 Sino siya na pinili mo kaysa sakin?,human
-Sino ang may gusto sa kanya ?,entity
+Sino ang may gusto sa kanya?,entity
 Alin samin ang mas maganda?,entity
 "Alin ang mas gusto mo, papaya o saging?",entity
 Alin diyan ang mas gusto mo?,entity
@@ -253,7 +251,7 @@ Alin sa mga ito ang nagustuhan mo? ,entity
 Alin dyan ang pumatay sa pinsan ko? ,human
 Alin ang naiiba? ,entity
 Saan mo siya huling nakita? ,location
-Saang banda siya nakatira? ,location
+Saang banda siya nakatira?,location
 Saan ka nya iniwan? ,location
 "Ano ang pipiliin mo, gatas na choco o choco na gatas?",entity
 Ano ang favorite color mo?,description
@@ -418,7 +416,7 @@ Saan siya pumunta?,location
 Saan ka tumungo?,location
 Ano ang kailangan kong gawin upang ikay mapasaakin?,description
 Bakit napakapangit ng disenyo ng iyong salwal?,human
-Paano ba kita maikukumbensi na ako ay tama at ikaw ay mali,description
+Paano ba kita maikukumbensi na ako ay tama at ikaw ay mali?,description
 Kailan siya darating?,numeric
 Sino ang salarin ng krimen na ito?,human
 Alin dito sa apat na tuta ang pipiliin ko?,entity
@@ -491,7 +489,7 @@ Ano ang paborito mong kulay?,entity
 Ano ang paborito mong numero?,numeric
 Bakit kaya yun blackboard ndi kulay black?,description
 "Bakit kapag close kayo, open kayo sa isa't isa?",description
-"bakit ang tagalog sa ""cabinet members"" ay miyembro ng gabinete? di ba dapat miyembro ng aparador?",description
+"bakit ang tagalog sa ""cabinet members"" ay miyembro ng gabinete, di ba dapat miyembro ng aparador?",description
 "Paano na kaya, di ko naman sinasadya?",human
 Paano mo malalaman pangalan ko?,entity
 Paano mo malalaman ang year level ko?,entity
@@ -504,29 +502,29 @@ Sino ang papakasalan mo?,entity
 Saan na nga ba ang barkada?,location
 Saan ka tumatambay sa skwelahan?,location
 Saan ka ngayon?,location
-Ano ba ang pangalan ng kompanya nila? ,location
-Ano ba ang mayroon sa kanya na wala ako? ,description
-Ano ang tawag sa taong walang pakialam sa iba? ,description
-Ano ang gustong mangyari ni Duterte sa bansang Pilipinas? ,description
-Ano sa palagay mo ang gustong kulay ni Faye? ,description
-Anong oras ba magsisimula ang patimpalak? ,numeric
-Bakit mo siya iniwan sa gitna ng daan? ,description
+Ano ba ang pangalan ng kompanya nila?,location
+Ano ba ang mayroon sa kanya na wala ako?,description
+Ano ang tawag sa taong walang pakialam sa iba?,description
+Ano ang gustong mangyari ni Duterte sa bansang Pilipinas?,description
+Ano sa palagay mo ang gustong kulay ni Faye?,description
+Anong oras ba magsisimula ang patimpalak?,numeric
+Bakit mo siya iniwan sa gitna ng daan?,description
 Bakit siya umalis sa opisina? ,description
-Bakit lagi kang wala sa pwesto mo? ,description
-Bakit lagi kang nagtatanong ng mga walang kwentang bagay? ,description
-Bakit madali lang sa iba ang maglaro ng damdamin? ,description
-Paano ba lulutuin ang ginata-ang kalabasa? ,description
-Paano nangyari ang pamamaril sa isang alkalde? ,description
-Paano mo sinimulan ang isang bagay na wala ka pang alam? ,description
-Paano ba ang magmahal na hindi masasaktan? ,description
-Kailan ba ang tamang panahon na tayo ay muling magsasama? ,numeric
+Bakit lagi kang wala sa pwesto mo?,description
+Bakit lagi kang nagtatanong ng mga walang kwentang bagay?,description
+Bakit madali lang sa iba ang maglaro ng damdamin?,description
+Paano ba lulutuin ang ginata-ang kalabasa?,description
+Paano nangyari ang pamamaril sa isang alkalde?,description
+Paano mo sinimulan ang isang bagay na wala ka pang alam?,description
+Paano ba ang magmahal na hindi masasaktan?,description
+Kailan ba ang tamang panahon na tayo ay muling magsasama?,numeric
 Kailan ba ang kaarawan ni Glenndie?,numeric
-Kailan mo ba mapapansin ang aking lihim na pagtingin? ,numeric
-Kailan ko ba pwedeng makuha ang aking diploma? ,numeric
-Kailan mo siya papaasahin? ,numeric
-Sino ang nag-utos sa iyo na saktan ang damdamin ko? ,human
-Sino ang huling nakakita sa nangyaring patayan? ,human
-Sino dito ang pwedeng makatrabaho ng prinsesa? ,human
+Kailan mo ba mapapansin ang aking lihim na pagtingin?,numeric
+Kailan ko ba pwedeng makuha ang aking diploma?,numeric
+Kailan mo siya papaasahin?,numeric
+Sino ang nag-utos sa iyo na saktan ang damdamin ko?,human
+Sino ang huling nakakita sa nangyaring patayan?,human
+Sino dito ang pwedeng makatrabaho ng prinsesa?,human
 Sino sa kanila ang ini-ibig mo? ,human
 Alin sa dalawang ito ang mas matimbang sayo? ,description
 Alin dito ang pwede nating kainin mamaya? ,description
@@ -879,15 +877,14 @@ Alin sa mga sinabi mo ang tama? ,Entity
 Alin sa mga sinabi mo ang dapat kong paniwalaan? ,Entity
 Saan ba ako nagkulang? ,Description
 Saan ba ako dapat lumingon? ,Description
-"Nasaan ka man ngayon, alam kong maligaya ka na. ",Description
-Ano ang kulay ng iyong buhok,Entity
-Ano ang ibig sabihin ng buhay,Description
-Ano ang tanging nag papasaya sa iyo,Entity
+Ano ang kulay ng iyong buhok?,Entity
+Ano ang ibig sabihin ng buhay?,Description
+Ano ang tanging nag-papasaya sa iyo?,Entity
 Bakit berde ang mga dahon sa puno?,Description
 Bakit matangos ang ilong ni Faye?,Description
 Bakit pinya ang tawag sa pinya?,Description
 Paano kita mapapamahal?,Description
-Paano mag move on?,Description
+Paano mag-move-on?,Description
 Paano mo iiwan ang taong wala namang kasalanan?,Description
 Kailan naubos ang pagmamahal mo kanya?,Description
 Kailan ang tamang panahon?,Description
@@ -942,7 +939,7 @@ Kailan ka ba darating dito?,Numeric
 Kailan ka matatapos sa enrollment?,Numeric
 Kailan ba ang birthday mo?,Numeric
 Sino ang huling nakausap mo?,Human
-Sinu-sino ang mga kaibigan mo?,HUman
+Sinu-sino ang mga kaibigan mo?,Human
 Sino ang unang nagpatibok ng iyong puso?,Human
 Alin ang mas gusto mo Jollibee o Mcdo?,Entity
 Alin sa mga guro mo ang iyong paborito?,Entity
@@ -1269,7 +1266,7 @@ Ano ang gusto mo?,Entity
 Bakit may Mahal Kang iba?,Description
 Bakit ganun?,Description
 Bakit ngayon ka lang?,Description
-Pano to Gawin?,Description
+Paano to Gawin?,Description
 Paano ba ang magmahal?,Description
 Paano magimpok?,Description
 Kailan ka aalis?,Numeric
@@ -1312,7 +1309,8 @@ Bakit mo ko iniwan?,Description
 Bakit di mo ko pinaglaban?,Description
 Bakit pa natin sinimulan kung sa huli iiwan mo rin lang naman?,Description
 Paano mo nagawa sa'kin 'to?,Description
-Paano na ang bukas kung wala ka? Paano ka nakakatulog sa gabi?,Description
+Paano na ang bukas kung wala ka?,Description
+Paano ka nakakatulog sa gabi?,Description
 Kailan mo naisipang bumitaw?,Numeric
 Kailan ka nagsawa?,Numeric
 Kailan mo ko babalikan?,Numeric
@@ -1443,7 +1441,7 @@ Ano ang pinakamalaking contribusyon ang nagawa mo para sa bayan?,Description
 Ano ang pinakamasayang nangyari sa unang linggo mo sa ikalawang semestro ng colehiyo?,Description
 "Bakit kaya may nasasaktan sa isang relasyon kung ""mahal"" naman nila ang isa't-isa?",Description
 Bakit ang hirap gumawa ng mga tanong na tagalog?,Description
-"Bakit, hanggang ngayon, ay nag-iisip pa rin ako ng mga tanong na wala namang kahulugan?",Description
+"Bakit hanggang ngayon, ay nag-iisip pa rin ako ng mga tanong na wala namang kahulugan?",Description
 Paano mo sasagutin ang pasulit kung linunod kana ng maraming pagsusulit sa buhay mo?,Description
 Paano mo labanan ang kahinaan ng lakas?,Description
 Paano maging tunay na masaya?,Description
@@ -1796,7 +1794,7 @@ Ano ang hilig mo?,Entity
 Bakit may Mahal Kang iba?,Description
 Bakit ngayon ka lang?,Numeric
 Bakit ganun?,Description
-Pano to Gawin?,Description
+Paano to Gawin?,Description
 Paano magimpok?,Description
 Paano ba ang magmahal?,Description
 Sino ka ba?,Human
@@ -1968,7 +1966,7 @@ Ano ang pinakamalaking contribusyon ang nagawa mo para sa bayan?,Entity
 Ano ang pinakamasayang nangyari sa unang linggo mo sa ikalawang semestro ng colehiyo?,Description
 "Bakit kaya may nasasaktan sa isang relasyon kung ""mahal"" naman nila ang isa't-isa?",Description
 Bakit ang hirap gumawa ng mga tanong na tagalog?,Description
-"Bakit, hanggang ngayon, ay nag-iisip pa rin ako ng mga tanong na wala namang kahulugan?",Description
+"Bakit hanggang ngayon, ay nag-iisip pa rin ako ng mga tanong na wala namang kahulugan?",Description
 Paano mo sasagutin ang pasulit kung linunod kana ng maraming pagsusulit sa buhay mo?,Description
 Paano mo labanan ang kahinaan ng lakas?,Description
 Paano maging tunay na masaya?,Description
@@ -2088,7 +2086,7 @@ Saang lugar gusto mo siyang dalhin?,Location
 Saang lugar ang hindi mo makakalimutan magpakailanman?,Location
 Ano ang ginagawa mo ngayon?,Entity
 Ano ang sinabi ng ating  mga guro?,Entity
-Ano-anu ang mga kinakailangan para sa ating proyekto?,Entity
+Anu-ano ang mga kinakailangan para sa ating proyekto?,Entity
 Ano bang ginawa ko sayo?,Description
 Bakit ba tayo nag-hiwalay?,Description
 Bakit kinakailangang bigyan ng pansin ang taong kagaya niya?,Description
@@ -2099,7 +2097,7 @@ Paano na ito?,Description
 Kailan pa bang mapapansin ang aking lihim?,Description
 Kailan ba mapapansin ang pusong bitin na bitin?,Description
 Kailan natin isusumite ang proyekto?,Numeric
-Sino-sino ang nasaktan?,Human
+Sinu-sino ang nasaktan?,Human
 Sino ang kabarkada mo?,Human
 Sino ang mahal mo?,Human
 Alin-alin diyan ang sayo?,Entity
@@ -2147,7 +2145,7 @@ Sino ang iyong unang minahal?,Human
 Saan mo ako unang nakita?,Location
 Hanggang saan tayo makakarating?,Description
 Saan ba ako dapat lumugar?,Description
-Ano ang ibig sabihin ng CBFM,Description
+Ano ang ibig sabihin ng CBFM?,Description
 Ano ang nangyari sa atin?,Description
 Ano ang ibig sabihin ng kupal?,Description
 Bakit ang galing kumanta ni Bruno Mars?,Description
@@ -2668,7 +2666,7 @@ Bakit importante ang pag-ibig?,Description
 Bakit ka maganda kung may mas maganda pa sa iyo?,Description
 Paano mo sasabihin sa crush mo na crush mo siya kung may boyfriend/girlfriend ka na?,Description
 Paano ka makakapag move-on?,Description
-Paano mo malalaman kung okay. a kayo ng kaibigan mo?,Description
+Paano mo malalaman kung okay na kayo ng kaibigan mo?,Description
 Kailan ako yayaman?,Numeric
 Kailan tatanggapin ng lipunan ang mga baliw sa pag-ibig?,Numeric
 Kailan magkaka-asawa si Jeon Jungkook?,Numeric
@@ -2871,7 +2869,7 @@ Saan ako maghihintay?,Location
 Ano ba talaga tayo?,Description
 Ano sa palagay mo ang dapat?,Description
 Ano ang ibig sabihin ng smh?,Abbreviation
- Bakit madamot ang kaibigan ko?,Description
+Bakit madamot ang kaibigan ko?,Description
 Bakit ang hirap ng mathematics?,Description
 Bakit ang bulakbol ko mag-aral?,Description
 Paano ko to lulutasin?,Description
