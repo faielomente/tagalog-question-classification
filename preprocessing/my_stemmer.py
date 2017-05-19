@@ -9,7 +9,7 @@ prefix = ['makapang','nakapang','nakapan','makapan','nakapam','makapam','nakapag
     'magpapa','nagpapa','nagkaka','magkaka','ipakipa','ikapang','naipag','mangag','nangag','kasing','ipang','pinag','papag','mapag', 'kapag',
     'napag','ipaki','magka','magsi','nagka','magma','nagma','magpa','nagpa','maipa','naipa','kasim','pagpa','paka','paki','pang','ipag',
     'mang','nang','maka','naka','mapa','napa','ika','pag','isa','ipa','mai','nai','mag','nag','man','nan','mam','nam','ma','na','ka','pa']
-suffix = ['han', 'hin', 'an','in'] #suffixes
+suffix = ['han', 'hin', 'an','in', 'ng'] #suffixes
 vowel = ['a','e','i','o','u']
 
 def strip_infix(word):
@@ -110,6 +110,7 @@ def format_data(input, output):
                         output_file.write("\n")
                         output_file.write("?")
                         output_file.write("\n")
+                        output_file.write("\n")
                         # ctr += 1
                     elif word != "":
                         # print(word)
@@ -140,6 +141,9 @@ def  write_to_file(stemmed_data):
         output_file.write("XXX")
         output_file.write("\n")
 
+        if dict['word'] == "?":
+            output_file.write("\n")
+
     output_file.close()
 
 
@@ -162,56 +166,54 @@ def main():
     Rearrange the data into vertical sentences.
     Each sentence ending with a questions mark
     """
-    # input = open(os.path.abspath('files/labelled_data.csv'))
-    # output = open(os.path.abspath('files/dataset_pos.in'), 'w+')
-    # format_data(input, output)
+    input = open(os.path.abspath('files/labelled_data.csv'))
+    output = open(os.path.abspath('files/dataset_pos.in'), 'w+')
+    format_data(input, output)
     # count_qmark(input)
 
     """
     The output file of format_data() will be read.
     And each word is stemmed.
     """
-    # wordfile = open(os.path.abspath('files/dataset_pos.in'))
-    wordfile = open(os.path.abspath('preprocessing/test_stemmer.txt'))
+    wordfile = open(os.path.abspath('files/dataset_pos.in'))
+    # wordfile = open(os.path.abspath('preprocessing/test_stemmer.txt'))
 
     stemmed_data = list()
 
-    for words in wordfile.readlines():
-        infix_dict = {'word': "", 'infix': "_"}
-        pref_dict = {'word': "", 'prefix': "_", 'has_pref': False}
-        redup_dict = {'word': "", 'redup': "_"}
-        suf_dict = {'word':"", 'suffix': "_"}
-        morphology = {'word':"", 'root':"", 'prefix':"_", 'infix':"_", 'suffix':"_", 'redup':"_"}
-        root = words    
-        infix_dict = strip_infix(words.lower())    ###remove any infix first
-        temp_word = infix_dict['word']
+    for w in wordfile.readlines():
+        if len(w.strip()) > 0:
+            infix_dict = {'word': "", 'infix': "_"}
+            pref_dict = {'word': "", 'prefix': "_", 'has_pref': False}
+            redup_dict = {'word': "", 'redup': "_"}
+            suf_dict = {'word':"", 'suffix': "_"}
+            morphology = {'word':"", 'root':"", 'prefix':"_", 'infix':"_", 'suffix':"_", 'redup':"_"}
+            root = w
+            temp_word = w
+            if len(w) > 5:
+                infix_dict = strip_infix(w.lower())    ###remove any infix first
+                temp_word = infix_dict['word']
 
-        if len(temp_word.strip()) > 6: #usually root words are 4-5 characters in length
-            pref_dict = strip_prefix(temp_word) #try to check prefixes and suffixes
-            temp_word = pref_dict['word']
-            suf_dict = strip_suffix(temp_word)
-            temp_word = suf_dict['word']
-            redup_dict = check_reduplication(temp_word)
-            temp_word = redup_dict['word']
+            if len(temp_word.strip()) >= 5: #usually root words are 4-5 characters in length
+                pref_dict = strip_prefix(temp_word) #try to check prefixes and suffixes
+                temp_word = pref_dict['word']
+                suf_dict = strip_suffix(temp_word)
+                temp_word = suf_dict['word']
+                redup_dict = check_reduplication(temp_word)
+                temp_word = redup_dict['word']
+            
+            root = temp_word
 
 
-        # while((pref_dict['has_pref'] == True) and (len(temp_word) > 7)):
-        #     pref_dict = strip_prefix(temp_word)  #try to check prefixes and suffixes
-        #     # print("HEEEREEEE!!!!!!!!!!!!!!!!!!!!!!!", pref_dict['has_pref'])
-        #       temp_word = pref_dict['word']
-        
-        root = temp_word
+            morphology['word'] = w.strip()
+            morphology['root'] = root.strip()
+            morphology['prefix'] = pref_dict['prefix']
+            morphology['suffix'] = infix_dict['infix']
+            morphology['redup'] = redup_dict['redup']
 
-        # morphology['word'] = words.strip()
-        # morphology['root'] = root.strip()
-        # morphology['prefix'] = pref_dict['prefix']
-        # morphology['suffix'] = infix_dict['infix']
-        # morphology['redup'] = redup_dict['redup']
+            # print(w.strip(), root.strip())
+            stemmed_data.append(morphology)
 
-        print(words.strip(), root.strip())
-        stemmed_data.append(morphology)
-
-    # write_to_file(stemmed_data)
+    write_to_file(stemmed_data)
     # print(stemmed_data)
 
     wordfile.close()
