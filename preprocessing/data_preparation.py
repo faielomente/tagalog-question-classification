@@ -2,11 +2,16 @@ import sys
 import os
 import csv
 import re
+import string
 
 import numpy as np
 from sklearn.feature_extraction import DictVectorizer
 
-def sentence_to_object(file):
+from nltk.tokenize import RegexpTokenizer
+from nltk.util import ngrams
+
+
+def to_wordpos_dict(file):
 
     text = file.readlines();
     array = list()
@@ -18,15 +23,15 @@ def sentence_to_object(file):
         if data[0] != "?":
             word = data[0];
             pos = data[len(data)-1]
-            pos = get_tags(pos, 1)
+            # pos = get_tags(pos, 1)
             dict[word] = pos.strip()
         elif data[0] == '?':
             array.append(dict)
             dict = {}
         ctr += 1
 
-    print ctr
-    # print array
+    # print ctr
+    print array
     
     return array	
 
@@ -116,9 +121,9 @@ def pos_vec(file):
     input_file = file
     data = []
     
-    data = sentence_to_object(input_file)
-    # print data
-    data = transform(data)
+    data = to_wordpos_dict(input_file)
+    print data
+    # data = transform(data) #don't transfor for csr implementation
     
     input_file.close()
     
@@ -156,17 +161,52 @@ def get_wh_question(file):
     return vec
 
 
+def tokenize_word_data(file):
+    reader = csv.reader(file)
+
+    tokenizer = RegexpTokenizer(r'\w+')
+    data = []
+    row = 0
+
+    for row in reader:
+        # Escaping the first row because it only contains the column titles
+        if row == 0:
+            row += 1
+        else:
+            data.append(tokenizer.tokenize(row[0]))
+
+
+    print len(data)
+
+    return data
+
+
+def extract_ngrams(data):
+
+    for sentence in data:
+        bigram
+        trigram
+
+
 
 def main():
-    pos_data = pos_vec(open(os.path.abspath('files/dataset_pos.out')))
-    wh_vector = get_wh_question(open(os.path.abspath('files/labelled_data.csv')))
-    category = category_vector(open(os.path.abspath('files/labelled_data.csv')))
+    """
+    Checking the equality of the pos tags, wh-words and category gathered.
+    Total should be 3077.
+    """
+    # pos_data = pos_vec(open(os.path.abspath('files/dataset_pos.out')))
+    # wh_vector = get_wh_question(open(os.path.abspath('files/labelled_data.csv')))
+    # category = category_vector(open(os.path.abspath('files/labelled_data.csv')))
 
-    print "Data Length: ", len(pos_data)
-    print "Wh_Question Length: ", len(wh_vector)
-    print "Category Length: ", len(category)
+    # print "Data Length: ", len(pos_data)
+    # print "Wh_Question Length: ", len(wh_vector)
+    # print "Category Length: ", len(category)
+
+    ###########
+    tokenize_word_data(open(os.path.abspath('files/labelled_data.csv')))
+
+
 
 
 if __name__ == '__main__':
     main()
-    # count_qmark(open(os.path.abspath('files/dataset_pos.out')))

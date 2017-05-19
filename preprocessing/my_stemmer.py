@@ -162,16 +162,17 @@ def main():
     Rearrange the data into vertical sentences.
     Each sentence ending with a questions mark
     """
-    input = open(os.path.abspath('files/labelled_data.csv'))
-    output = open(os.path.abspath('files/dataset_pos.in'), 'w+')
-    format_data(input, output)
+    # input = open(os.path.abspath('files/labelled_data.csv'))
+    # output = open(os.path.abspath('files/dataset_pos.in'), 'w+')
+    # format_data(input, output)
     # count_qmark(input)
 
     """
     The output file of format_data() will be read.
     And each word is stemmed.
     """
-    wordfile = open(os.path.abspath('files/dataset_pos.in'))
+    # wordfile = open(os.path.abspath('files/dataset_pos.in'))
+    wordfile = open(os.path.abspath('preprocessing/test_stemmer.txt'))
 
     stemmed_data = list()
 
@@ -201,16 +202,16 @@ def main():
         
         root = temp_word
 
-        morphology['word'] = words.strip()
-        morphology['root'] = root.strip()
-        morphology['prefix'] = pref_dict['prefix']
-        morphology['suffix'] = infix_dict['infix']
-        morphology['redup'] = redup_dict['redup']
+        # morphology['word'] = words.strip()
+        # morphology['root'] = root.strip()
+        # morphology['prefix'] = pref_dict['prefix']
+        # morphology['suffix'] = infix_dict['infix']
+        # morphology['redup'] = redup_dict['redup']
 
-        # print(morphology)
+        print(words.strip(), root.strip())
         stemmed_data.append(morphology)
 
-    write_to_file(stemmed_data)
+    # write_to_file(stemmed_data)
     # print(stemmed_data)
 
     wordfile.close()
