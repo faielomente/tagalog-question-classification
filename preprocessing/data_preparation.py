@@ -148,7 +148,7 @@ def count_qmark(file):
 	for line in text:
 		if line.count("?") > 2:
 			print line
-    
+
 
 def pos_vec(file):
     input_file = file
@@ -214,17 +214,9 @@ def tokenize_word_data(file):
     return data
 
 
-def extract_ngrams(data):
-
-    for sentence in data:
-        bigram
-        trigram
-
-
-
 def main():
     """
-    Preprocessing the raw data.
+    1. Preprocessing the raw data.
     """
     # input_file = open(os.path.abspath('files/Help a CS Student Graduate.csv'))
     # output_file = open(os.path.abspath('files/cleaning_output.csv'), 'w')
@@ -234,7 +226,7 @@ def main():
     ########
 
     """
-    Checking the equality of the pos tags, wh-words and category gathered.
+    2. Checking the equality of the pos tags, wh-words and category gathered.
     Total should be 3077.
     """
     # pos_data = pos_vec(open(os.path.abspath('files/dataset_pos.out')))
@@ -245,7 +237,7 @@ def main():
     # print "Wh_Question Length: ", len(wh_vector)
     # print "Category Length: ", len(category)
     ###########
-    
+
     tokenize_word_data(open(os.path.abspath('files/labelled_data.csv')))
 
 
