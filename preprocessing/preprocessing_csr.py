@@ -51,23 +51,32 @@ def get_coarsetag(tag, level):
 	return tag
 
 
-def get_raw_sentences(file):
+def get_raw(file, column_no):
 	"""
 	Get the labelled sentence from the csv file then convert
 	it to array
 	"""
 
 	r = csv.reader(file)
-	text = []
 
-	for row in r:
-		for column in range(0,1):
-			if row[column] != "Questions":
-				text.append(row[column])
+	if column_no == 0:
+		text = []
+		for row in r:
+			if row[0] != "Questions":
+				text.append(row[0])
 
-	# print len(text)
+		print len(text)
 
-	return text
+		return text
+	elif column_no == 1:
+		cat = []
+		for row in r:
+			if row[1] != "Category":
+				cat.append(row[1])
+
+		print len(cat)
+
+		return cat
 
 
 def prune(tuple_array, sentences):
@@ -86,32 +95,37 @@ def prune(tuple_array, sentences):
 
 			if word.lower() in conj:
 				ind = text.index(word)
-				print ind
 
 				# conjuction should not be too near in the beginning of the sentence
 				if len(text) >= 5 and ind >= math.ceil(len(text)/2):
 					tuple_array[i] = tuple_array[i][:ind]
+					print tuple_array[i]
 				elif ind == 0:
 					for j in range(ind, len(text)):
-						print text[j].lower()
 						if text[j].lower() in q_words:
 							tuple_array[i] = tuple_array[i][j:len(text)]
 							break;
-
 	
-	for i in range(0, len(tuple_array)):
-		print sentences[i], tuple_array[i]
+	# for i in range(0, len(tuple_array)):
+	# 	print tuple_array[i]
+
+	return tuple_array
 
 
 def main():
 	input1 = open(os.path.abspath('files/dataset_pos.out'))
 	input2 = open(os.path.abspath('files/labelled_data.csv'))
-	x = to_tuples_array(input1)
-	y = get_raw_sentences(input2)
+	input3 = open(os.path.abspath('files/labelled_data.csv'))
+
+	tup = to_tuples_array(input1)
+	sen = get_raw(input2, 0)
+	cat = get_raw(input3, 1)
+
 	input1.close()
 	input2.close()
+	input3.close()
 
-	prune(x, y)
+	prune(tup, sen)
 
 
 
