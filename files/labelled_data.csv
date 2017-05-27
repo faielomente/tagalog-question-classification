@@ -202,7 +202,7 @@ Paano ba sumakay ng jeep?,description
 Paano ako makakabawi sa iyo?,description
 Paano gumawa nang parol?,description
 Kailan ba akong pumunta sa inyo?,numeric
-Sino ba ako  sa buhay mo?,human
+Sino ba ako sa buhay mo?,human
 Sino siya na pinili mo kaysa sakin?,human
 Sino ang may gusto sa kanya?,entity
 Alin samin ang mas maganda?,entity
@@ -484,7 +484,7 @@ Alin sa mga kapatid mo ang mas close ka?,entity
 Saan kaya ako maaaring tumira na walang iistorbo sa akin?,location
 Saan ko mahahanap ang the one? ,location
 Saan na si ate ko?,location
-Ano ang  paborito mong pagkain?,entity
+Ano ang paborito mong pagkain?,entity
 Ano ang paborito mong kulay?,entity
 Ano ang paborito mong numero?,numeric
 Bakit kaya yun blackboard ndi kulay black?,description
@@ -613,7 +613,7 @@ Kailan magigising ang pusong matagal nang natutulog?,numeric
 Sino ang lecheng guro na nagbagsak sa amin?,description
 Sino nga ba siya sa buhay mo?,description
 Sino ang pumatay sa pag-ibig ko?,human
-Sino ang babaeng nagpapatibok  ng puso mo?,human
+Sino ang babaeng nagpapatibok ng puso mo?,human
 Sino ang nagbigay ng lipstick?,human
 Sino ang lalaking tumalon sa bintana at nagpakamatay?,human
 Alin sa dalawa ang gusto mo?,description
@@ -842,7 +842,7 @@ Kailan ang birthday mo?,Numeric
 Kailan mo ibibigay ang cellphone niya?,Numeric
 Kailan kayo pupunta sa beach?,Numeric
 Sino ang nakabili ng Nike na sapatos na nakalagay dito?,HUman
-"Sino ang mas maganda, si Liza  o si Julia?",Human
+"Sino ang mas maganda, si Liza o si Julia?",Human
 Sino ang nagbigay ng Lacoste na t-shirt sa kanya?,Human
 Alin dito ang dadalhin natin para kay Mam Jane?,Entity
 Alin sa mga pantalon na ito ang Levi's ang brand?,Entity
@@ -1143,7 +1143,7 @@ Kailang kaya ako magkakaroon ng isang bahay na nakasabit sa puno?,Numeric
 Kailan tatama ang bagyo sa kalupaan?,Numeric
 Sino ang mas matimbang sa puso ni Waldo?,Human
 Sino nga ba talaga ang mauuna kung magkakarera ang isang pagong at isang kuneho?  ,Entity
-Sino  kaya ang mananalo sa labanang Pacquiao at Crawford?,Human
+Sino kaya ang mananalo sa labanang Pacquiao at Crawford?,Human
 Alin kaya sa mga kandidata ang mananaig at kokoronahan?,Entity
 Alin sa mga empleyado ang malinis at mabilis magtrabaho?,Human
 Alin sa mga istasyon ang magaling sa larangan ng pagbabalita?,Entity
@@ -1453,7 +1453,7 @@ Sino si Jon Snow at bakit wala siyang alam?,Description
 Sino ang taong nagpasaya sayo?,Human
 "Alin ang mas mabigat, hustisya o ang paghiganti?",Entity
 "Alin sa dalawa ang mas masarap, gatas na choco o choco na gatas?",Entity
-"Alin ang mas mahalaga para sayo, kaligayahan o  kayamanan?",Entity
+"Alin ang mas mahalaga para sayo, kaligayahan o kayamanan?",Entity
 Saan ako susunod magbasa?,Location
 "Saan pupunta sa Frodo at Sam, sa Gondor o sa Rivendell?",Location
 Saan nakatira si Uvuvwevwevwe Onyetenyevwe Ugwemubwem Ossas?,Location
@@ -1511,7 +1511,7 @@ Paano maging maganda ang boses?,Description
 Kailan kaya namin matatapos ang thesis?,Description
 Kailan nagsimula ang Valentine's Day?,Numeric
 Kailan kaya puputi ang uwak?,Description
-Sino si  Messi?,Description
+Sino si Messi?,Description
 Sino ang susunod na Miss Universe?,Human
 Sino ang nakaimbento ng lotion?,Human
 "Alin ang mas masakit, LDR o LMB?",Entity
@@ -1671,7 +1671,7 @@ Kailang kaya ako magkakaroon ng isang bahay na nakasabit sa puno?,Description
 Kailan tatama ang bagyo sa kalupaan?,Numeric
 Sino ang mas matimbang sa puso ni Waldo?,Human
 Sino nga ba talaga ang mauuna kung magkakarera ang isang pagong at isang kuneho?  ,Human
-Sino  kaya ang mananalo sa labanang Pacquiao at Crawford?,Human
+Sino kaya ang mananalo sa labanang Pacquiao at Crawford?,Human
 Alin kaya sa mga kandidata ang mananaig at kokoronahan?,Human
 Alin sa mga empleyado ang malinis at mabilis magtrabaho?,Human
 Alin sa mga istasyon ang magaling sa larangan ng pagbabalita?,Entity
@@ -1978,7 +1978,7 @@ Sino si Jon Snow at bakit wala siyang alam?,Description
 Sino ang taong nagpasaya sayo?,Human
 "Alin ang mas mabigat, hustisya o ang paghiganti?",Entity
 "Alin sa dalawa ang mas masarap, gatas na choco o choco na gatas?",Entity
-"Alin ang mas mahalaga para sayo, kaligayahan o  kayamanan?",Entity
+"Alin ang mas mahalaga para sayo, kaligayahan o kayamanan?",Entity
 Saan ako susunod magbasa?,Location
 "Saan pupunta sa Frodo at Sam, sa Gondor o sa Rivendell?",Location
 Saan nakatira si Uvuvwevwevwe Onyetenyevwe Ugwemubwem Ossas?,Location
@@ -2036,7 +2036,7 @@ Paano maging maganda ang boses?,Description
 Kailan kaya namin matatapos ang thesis?,Numeric
 Kailan nagsimula ang Valentine's Day?,Numeric
 Kailan kaya puputi ang uwak?,Description
-Sino si  Messi?,Description
+Sino si Messi?,Description
 Sino ang susunod na Miss Universe?,Human
 Sino ang nakaimbento ng lotion?,Human
 "Alin ang mas masakit, LDR o LMB?",Entity
@@ -2085,7 +2085,7 @@ Saang lugar mo gustong pumunta?,Location
 Saang lugar gusto mo siyang dalhin?,Location
 Saang lugar ang hindi mo makakalimutan magpakailanman?,Location
 Ano ang ginagawa mo ngayon?,Entity
-Ano ang sinabi ng ating  mga guro?,Entity
+Ano ang sinabi ng ating mga guro?,Entity
 Anu-ano ang mga kinakailangan para sa ating proyekto?,Entity
 Ano bang ginawa ko sayo?,Description
 Bakit ba tayo nag-hiwalay?,Description
@@ -2855,7 +2855,7 @@ Paano mo ako nagawang lokohin?,Description
 Paano ko sasabihin ang aking nararamdaman?,Description
 Paano maging sayo?,Description
 Kailan mo sasabihing importante ako sa buhay mo?,Numeric
-Kailan mo ba mapapansin ang aking  lihim?,Numeric
+Kailan mo ba mapapansin ang aking lihim?,Numeric
 Kailan tayo magkikitang muli?,Numeric
 Sino nga ba sya sa buhay mo?,Description
 "Sino ang pipiliin ko, mahal ko o mahal ako?",Description

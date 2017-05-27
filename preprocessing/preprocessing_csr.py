@@ -63,7 +63,7 @@ def get_raw(file, column_no):
 		text = []
 		for row in r:
 			if row[0] != "Questions":
-				text.append(row[0])
+				text.append(row[0].strip())
 
 		print len(text)
 
@@ -89,6 +89,8 @@ def prune(tuple_array, sentences):
 		temp = sentences[i].replace('?', '')
 		text = temp.split(" ")
 
+		print sentences[i], tuple_array[i]
+		
 		for word in text:
 			# if '?' in word:
 			# 	word = word.replace('?','')
@@ -99,7 +101,6 @@ def prune(tuple_array, sentences):
 				# conjuction should not be too near in the beginning of the sentence
 				if len(text) >= 5 and ind >= math.ceil(len(text)/2):
 					tuple_array[i] = tuple_array[i][:ind]
-					print tuple_array[i]
 				elif ind == 0:
 					for j in range(ind, len(text)):
 						if text[j].lower() in q_words:
@@ -115,17 +116,24 @@ def prune(tuple_array, sentences):
 def main():
 	input1 = open(os.path.abspath('files/dataset_pos.out'))
 	input2 = open(os.path.abspath('files/labelled_data.csv'))
-	input3 = open(os.path.abspath('files/labelled_data.csv'))
+	# input3 = open(os.path.abspath('files/labelled_data.csv'))
 
 	tup = to_tuples_array(input1)
 	sen = get_raw(input2, 0)
-	cat = get_raw(input3, 1)
+
+	for i in range(0, len(sen)):
+		s = sen[i].split(" ")
+		if len(tup[i]) != len(s):
+			print s, tup[i]
+			print len(s), len(tup[i])
+
+	# cat = get_raw(input3, 1)
 
 	input1.close()
 	input2.close()
-	input3.close()
+	# input3.close()
 
-	prune(tup, sen)
+	# prune(tup, sen)
 
 
 

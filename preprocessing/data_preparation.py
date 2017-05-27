@@ -218,27 +218,27 @@ def main():
     """
     1. Preprocessing the raw data.
     """
-    # input_file = open(os.path.abspath('files/Help a CS Student Graduate.csv'))
-    # output_file = open(os.path.abspath('files/cleaning_output.csv'), 'w')
-    # extract(input_file, output_file)
-    # input_file.close()
-    # output_file.close()
+    input_file = open(os.path.abspath('files/Help a CS Student Graduate.csv'))
+    output_file = open(os.path.abspath('files/cleaning_output.csv'), 'w')
+    extract(input_file, output_file)
+    input_file.close()
+    output_file.close()
     ########
 
     """
     2. Checking the equality of the pos tags, wh-words and category gathered.
     Total should be 3077.
     """
-    # pos_data = pos_vec(open(os.path.abspath('files/dataset_pos.out')))
-    # wh_vector = get_wh_question(open(os.path.abspath('files/labelled_data.csv')))
-    # category = category_vector(open(os.path.abspath('files/labelled_data.csv')))
+    pos_data = pos_vec(open(os.path.abspath('files/dataset_pos.out')))
+    wh_vector = get_wh_question(open(os.path.abspath('files/labelled_data.csv')))
+    category = category_vector(open(os.path.abspath('files/labelled_data.csv')))
 
-    # print "Data Length: ", len(pos_data)
-    # print "Wh_Question Length: ", len(wh_vector)
-    # print "Category Length: ", len(category)
+    print "Data Length: ", len(pos_data)
+    print "Wh_Question Length: ", len(wh_vector)
+    print "Category Length: ", len(category)
     ###########
 
-    tokenize_word_data(open(os.path.abspath('files/labelled_data.csv')))
+    # tokenize_word_data(open(os.path.abspath('files/labelled_data.csv')))
 
 
 
