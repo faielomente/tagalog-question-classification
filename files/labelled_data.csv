@@ -1421,7 +1421,7 @@ ano ba problema mo?,Description
 bakit niya ko iniwan?,Description
 bakit siya ganun?,Description
 "bakit sa dami dami ng tao, siya pa?",Description
-paano nagka ganoon?,Description
+paano nagkaganoon?,Description
 paano ba magbago?,Description
 paano ba magmahal?,Description
 Hanggang kailan ako mahihintay?,Description
@@ -1946,7 +1946,7 @@ ano ba problema mo?,Entity
 bakit niya ko iniwan?,Description
 bakit siya ganun?,Description
 "bakit sa dami dami ng tao, siya pa?",Description
-paano nagka ganoon?,Description
+paano nagkaganoon?,Description
 paano ba magbago?,Description
 paano ba magmahal?,Description
 Hanggang kailan ako mahihintay?,Numeric
@@ -2445,7 +2445,7 @@ Sino ang pinakamaganda? ,Human
 Alin dito ang naiiba?,Entity
 Alin ang kanyang higit na magugustuhan?,Entity
 Alin dito ang pinakamura? ,Entity
-Saan makakakuha nang mga kailangang dokumento para magka visa?,Location
+Saan makakakuha nang mga kailangang dokumento para magkavisa?,Location
 Nasaan ang dulo nang bahaghari? ,Location
 Saan kaya ako makakakita nang mga panda? ,Location
 Ano ang iyong paboritong pagkain?,Entity

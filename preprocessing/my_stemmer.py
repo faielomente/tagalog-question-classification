@@ -134,6 +134,8 @@ def  write_to_file(stemmed_data):
         output_file.write(" ")
         output_file.write(dict['prefix'])
         output_file.write(" ")
+        output_file.write(dict['infix'])
+        output_file.write(" ")
         output_file.write(dict['suffix'])
         output_file.write(" ")
         output_file.write(dict['redup'])
@@ -207,7 +209,8 @@ def main():
             morphology['word'] = w.strip()
             morphology['root'] = root.strip()
             morphology['prefix'] = pref_dict['prefix']
-            morphology['suffix'] = infix_dict['infix']
+            morphology['infix'] = infix_dict['infix']
+            morphology['suffix'] = suf_dict['suffix']
             morphology['redup'] = redup_dict['redup']
 
             # print(w.strip(), root.strip())
