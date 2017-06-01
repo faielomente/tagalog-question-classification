@@ -81,20 +81,17 @@ def get_raw(file, column_no):
 
 def prune(tuple_array, sentences):
 
-	conj = {"sapagkat", "dahil", "dahil sa", "at saka", "ni", "at hindi", "ni hindi", "pero", "datapwat", "ngunit", "subalit", "o", "o kaya", "gayon pa man", "gayumpaman", "gayunman", "kaya", "kung kaya't", "kung kaya", "man", "maging", "hindi lamang", "kundi", "bagaman", "bagama't", "kapag", "kasi", "dahilan sa", "gawa ng", "porke", "porke at", "porke't", "pagkat", "kaya", "kaysa", "kahit", "gayong", "kung", "kung gayon", "habang", "nang", "nang sa gayon", "maging", "maliban kung", "palibhasa", "para", "upang", "parang", "pansamantala"}
+	conj = {"sapagkat", "dahil", "dahil sa", "at saka", "at hindi", "ni hindi", "pero", "datapwat", "ngunit", "subalit", "o", "o kaya", "gayon pa man", "gayumpaman", "gayunman", "kaya", "kung kaya't", "kung kaya", "man", "maging", "hindi lamang", "kundi", "bagaman", "bagama't", "kapag", "kasi", "dahilan sa", "gawa ng", "porke", "porke at", "porke't", "pagkat", "kaya", "kaysa", "kahit", "gayong", "kung", "kung gayon", "habang", "nang", "nang sa gayon", "maging", "maliban kung", "palibhasa", "para", "upang", "parang", "pansamantala", "hanggang"}
 
 	q_words = {'aling', 'alin-alin', 'alin-aling', 'saang', 'saan-saan', 'nasaan', 'nasaang', 'anong', 'anu-ano', 'anu-anong', 'inaano', 'paanong', 'papaano','papaanong', 'sinong', 'sinu-sino', 'sino-sinong', 'kailang', 'alin', 'saan', 'ano', 'kailan', 'paano', 'sino', 'bakit'}
+
+	pruned_array = []
 	
 	for i in range(0, len(sentences)):
 		temp = sentences[i].replace('?', '')
 		text = temp.split(" ")
-
-		print sentences[i], tuple_array[i]
 		
 		for word in text:
-			# if '?' in word:
-			# 	word = word.replace('?','')
-
 			if word.lower() in conj:
 				ind = text.index(word)
 
@@ -105,36 +102,65 @@ def prune(tuple_array, sentences):
 					for j in range(ind, len(text)):
 						if text[j].lower() in q_words:
 							tuple_array[i] = tuple_array[i][j:len(text)]
-							break;
-	
+							break
+
+	# Scan each tuple array for arrays not starting with a wh-word
+	for i in range(0, len(tuple_array)):
+		if tuple_array[i][0][0] not in q_words:
+			t = sentences[i].split(" ")
+
+			for j in range(0, len(tuple_array[i])):
+				if t[j].lower() in q_words:
+					tuple_array[i] = tuple_array[i][j:]
+
+
 	# for i in range(0, len(tuple_array)):
-	# 	print tuple_array[i]
+	# 	if tuple_array[i][0][0].lower() not in q_words:
+	# 		print tuple_array[i], sentences[i]
+
+
 
 	return tuple_array
+
+
+def to_fpformat(pruned_array, category):
+	
+	array = []
+
+	for i in range(0, len(pruned_array)):
+		data = []
+
+		for j in range(0, len(pruned_array[i])):
+			if j == 0:
+				data.append(pruned_array[i][j][0].lower())
+			else:
+				data.append(pruned_array[i][j][1].lower())
+
+		data.append(category[i].lower())
+		array.append(data)
+
+	return array
+
 
 
 def main():
 	input1 = open(os.path.abspath('files/dataset_pos.out'))
 	input2 = open(os.path.abspath('files/labelled_data.csv'))
-	# input3 = open(os.path.abspath('files/labelled_data.csv'))
+	input3 = open(os.path.abspath('files/labelled_data.csv'))
 
 	tup = to_tuples_array(input1)
 	sen = get_raw(input2, 0)
-
-	for i in range(0, len(sen)):
-		s = sen[i].split(" ")
-		if len(tup[i]) != len(s):
-			print s, tup[i]
-			print len(s), len(tup[i])
-
-	# cat = get_raw(input3, 1)
+	cat = get_raw(input3, 1)
 
 	input1.close()
 	input2.close()
-	# input3.close()
+	input3.close()
 
-	# prune(tup, sen)
+	pruned_array = prune(tup, sen)
+	fpFormat = to_fpformat(pruned_array, cat)
 
+	print len(pruned_array)
+	print fpFormat
 
 
 if __name__ == '__main__':
