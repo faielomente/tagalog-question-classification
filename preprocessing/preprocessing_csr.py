@@ -142,8 +142,20 @@ def to_fpformat(pruned_array, category):
 	return array
 
 
+def write_to_file(data):
+	output_file = open(os.path.abspath('files/fpFormat.out'), 'w')
 
-def main():
+	for i in range(0, len(data)):
+		for j in range(0, len(data[i])):
+			output_file.write(str(data[i][j]))
+			output_file.write(" ")
+		
+		output_file.write("\n")
+
+	output_file.close()
+
+
+def format():
 	input1 = open(os.path.abspath('files/dataset_pos.out'))
 	input2 = open(os.path.abspath('files/labelled_data.csv'))
 	input3 = open(os.path.abspath('files/labelled_data.csv'))
@@ -160,8 +172,12 @@ def main():
 	fpFormat = to_fpformat(pruned_array, cat)
 
 	print len(pruned_array)
-	print fpFormat
+	print len(fpFormat)
+
+	write_to_file(fpFormat)
+
+	return fpFormat
 
 
 if __name__ == '__main__':
-    main()
+    format()
