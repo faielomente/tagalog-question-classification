@@ -65,7 +65,7 @@ def get_raw(file, column_no):
 			if row[0] != "Questions":
 				text.append(row[0].strip())
 
-		print len(text)
+		# print len(text)
 
 		return text
 	elif column_no == 1:
@@ -74,7 +74,7 @@ def get_raw(file, column_no):
 			if row[1] != "Category":
 				cat.append(row[1])
 
-		print len(cat)
+		# print len(cat)
 
 		return cat
 
@@ -127,7 +127,8 @@ def to_fpformat(pruned_array, category):
 	
 	array = []
 
-	for i in range(0, len(pruned_array)):
+	# for i in range(0, len(pruned_array)):
+	for i in range(0, 10):
 		data = []
 
 		for j in range(0, len(pruned_array[i])):
@@ -143,14 +144,14 @@ def to_fpformat(pruned_array, category):
 
 
 def write_to_file(data):
-	output_file = open(os.path.abspath('files/fpFormat.out'), 'w')
+	output_file = open(os.path.abspath('files/fpFormat.csv'), 'w')
+
+	wr = csv.writer(output_file, quoting=csv.QUOTE_MINIMAL)
 
 	for i in range(0, len(data)):
-		for j in range(0, len(data[i])):
-			output_file.write(str(data[i][j]))
-			output_file.write(" ")
+		print data[i]
+		wr.writerow(data[i])
 		
-		output_file.write("\n")
 
 	output_file.close()
 
@@ -171,10 +172,10 @@ def format():
 	pruned_array = prune(tup, sen)
 	fpFormat = to_fpformat(pruned_array, cat)
 
-	print len(pruned_array)
-	print len(fpFormat)
+	# print len(pruned_array)
+	# print len(fpFormat)
 
-	write_to_file(fpFormat)
+	# write_to_file(fpFormat)
 
 	return fpFormat
 
