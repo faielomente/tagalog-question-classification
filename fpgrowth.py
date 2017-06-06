@@ -170,3 +170,36 @@ print initSet
 #The FP-tree
 myFPtree, myHeaderTab = createTree(initSet, 3)
 myFPtree.disp()
+
+# ------------------alternative mining fuction for the fp-tree---------------------------
+def mineTree(inTree, headerTable, minSup, preFix, freqItemList):
+    bigL = [v[0] for v in sorted(headerTable.items(), key=lambda p: p[1])] # (sort header table)
+    print 'headerTable: ', headerTable.items()
+#     ['cd', 'paano', 'rb', 'ano', 'cc', 'dt', 'saan', 'nn', 'pr', 'abbreviation', 'vb']
+    
+#     suffixTable = ['entity', 'abbreviation', 'description', 'human', 'location', 'numeric'] 
+    
+    for basePat in bigL: # start from bottom of header table
+        newFreqSet = list(preFix)
+        newFreqSet.append(basePat)
+    
+        print 'finalFrequent Item: ',newFreqSet #append to set
+
+        freqItemList.append(newFreqSet)
+        condPattBases = findPrefixPath(basePat, headerTable[basePat][1])
+    
+#     print 'condPattBases :' ,basePat, condPattBases
+
+    # 2. construct cond FP-tree from cond. pattern base
+        myCondTree, myHead = createTree(condPattBases, minSup)
+    
+#     print 'head from conditional tree: ', myHead
+    
+        if myHead != None: # 3. mine cond. FP-tree
+            print 'conditional tree for: ',newFreqSet
+            myCondTree.disp(1)
+            mineTree(myCondTree, myHead, minSup, newFreqSet, freqItemList)
+
+preFix = []
+freqItemList = []
+mineTree(myFPtree, myHeaderTab, 10, preFix, freqItemList)

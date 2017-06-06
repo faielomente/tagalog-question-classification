@@ -127,8 +127,8 @@ def to_fpformat(pruned_array, category):
 	
 	array = []
 
-	# for i in range(0, len(pruned_array)):
-	for i in range(0, 10):
+	for i in range(0, len(pruned_array)):
+	# for i in range(0, 10):
 		data = []
 
 		for j in range(0, len(pruned_array[i])):
