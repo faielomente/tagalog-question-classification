@@ -66,7 +66,7 @@ def to_wordpos_dict(file):
     # print ctr
     print array
     
-    return array	
+    return array    
 
 
 def get_tags(tag, level):
@@ -143,11 +143,11 @@ def category_vector(file):
 
 
 def count_qmark(file):
-	text = file.readlines();
+    text = file.readlines();
 
-	for line in text:
-		if line.count("?") > 2:
-			print line
+    for line in text:
+        if line.count("?") > 2:
+            print line
 
 
 def pos_vec(file):

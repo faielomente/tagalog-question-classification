@@ -123,22 +123,38 @@ def prune(tuple_array, sentences):
 	return tuple_array
 
 
-def to_fpformat(pruned_array, category):
+def get_data(pruned_array, category, dataset):
 	
 	array = []
 
-	for i in range(0, len(pruned_array)):
-	# for i in range(0, 10):
-		data = []
+	if dataset == 1:
+		y = int(math.ceil(len(pruned_array)*0.8))
 
-		for j in range(0, len(pruned_array[i])):
-			if j == 0:
-				data.append(pruned_array[i][j][0].lower())
-			else:
-				data.append(pruned_array[i][j][1].lower())
+		for i in range(0, y):
+			data = []
 
-		data.append(category[i].lower())
-		array.append(data)
+			for j in range(0, len(pruned_array[i])):
+				if j == 0:
+					data.append(pruned_array[i][j][0].lower())
+				else:
+					data.append(pruned_array[i][j][1].lower())
+
+			data.append(category[i].lower())
+			array.append(data)
+	elif dataset == 2:
+		x = int(len(pruned_array) - math.ceil(len(pruned_array)*0.2))
+
+		for i in range(x, len(pruned_array)):
+			data = []
+
+			for j in range(0, len(pruned_array[i])):
+				if j == 0:
+					data.append(pruned_array[i][j][0].lower())
+				else:
+					data.append(pruned_array[i][j][1].lower())
+
+			data.append(category[i].lower())
+			array.append(data)
 
 	return array
 
@@ -170,14 +186,15 @@ def format():
 	input3.close()
 
 	pruned_array = prune(tup, sen)
-	fpFormat = to_fpformat(pruned_array, cat)
+	training = get_data(pruned_array, cat, 1)
+	testing = get_data(pruned_array, cat, 2)
 
 	# print len(pruned_array)
 	# print len(fpFormat)
 
 	# write_to_file(fpFormat)
 
-	return fpFormat
+	return training, testing
 
 
 if __name__ == '__main__':
