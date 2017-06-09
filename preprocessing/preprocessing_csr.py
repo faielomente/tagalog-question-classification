@@ -155,6 +155,18 @@ def get_data(pruned_array, category, dataset):
 
 			data.append(category[i].lower())
 			array.append(data)
+	elif dataset == 3:
+		for i in range(0, len(pruned_array)):
+			data = []
+
+			for j in range(0, len(pruned_array[i])):
+				if j == 0:
+					data.append(pruned_array[i][j][0].lower())
+				else:
+					data.append(pruned_array[i][j][1].lower())
+
+			data.append(category[i].lower())
+			array.append(data)
 
 	return array
 
@@ -172,7 +184,7 @@ def write_to_file(data):
 	output_file.close()
 
 
-def format():
+def format(partitioned=0):
 	input1 = open(os.path.abspath('files/dataset_pos.out'))
 	input2 = open(os.path.abspath('files/labelled_data.csv'))
 	input3 = open(os.path.abspath('files/labelled_data.csv'))
@@ -181,20 +193,29 @@ def format():
 	sen = get_raw(input2, 0)
 	cat = get_raw(input3, 1)
 
+
 	input1.close()
 	input2.close()
 	input3.close()
 
 	pruned_array = prune(tup, sen)
-	training = get_data(pruned_array, cat, 1)
-	testing = get_data(pruned_array, cat, 2)
+
+	if partitioned == 1:
+		training = get_data(pruned_array, cat, 1)
+		testing = get_data(pruned_array, cat, 2)
+
+		return training, testing
+	else:
+		fpFormat = get_data(pruned_array, cat, 3)
+
+		return fpFormat
 
 	# print len(pruned_array)
 	# print len(fpFormat)
 
 	# write_to_file(fpFormat)
 
-	return training, testing
+	
 
 
 if __name__ == '__main__':
