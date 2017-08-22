@@ -204,7 +204,7 @@ def main():
 
             # usually root words are 4-5 characters in length
             if len(temp_word.strip()) >= 5:
-                # try to check prefixes and suffixes
+                # try to check prefixes, suffixes and reduplications
                 pref_dict = strip_prefix(temp_word)
                 temp_word = pref_dict['word']
                 suf_dict = strip_suffix(temp_word)
