@@ -2,8 +2,6 @@ import os
 import csv
 import re
 
-from sklearn.feature_extraction import DictVectorizer
-
 from nltk.tokenize import RegexpTokenizer
 
 
@@ -94,20 +92,20 @@ def transform(data):
     return temp
 
 
-def to_numerical():
-    input_file = open(os.path.abspath('files/dataset_pos.out'))
+# def to_numerical():
+#     input_file = open(os.path.abspath('files/dataset_pos.out'))
 
-    # sentence_to_object(input_file)
-    data = []
+#     sentence_to_object(input_file)
+#     data = []
 
-    vector = DictVectorizer(sparse=False)
-    data = sentence_to_object(input_file)
-    data = transform(data)
-    # print "To_numerical"
-    # print data
-    X = vector.fit_transform(data)
+#     vector = DictVectorizer(sparse=False)
+#     data = sentence_to_object(input_file)
+#     data = transform(data)
+#     # print "To_numerical"
+#     # print data
+#     X = vector.fit_transform(data)
 
-    print X
+#     print X
 
 
 def category_vector(file):
