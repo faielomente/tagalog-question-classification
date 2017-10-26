@@ -37,30 +37,6 @@ def delete_empty_string(my_list):
     return my_list
 
 
-def to_wordpos_dict(file):
-    text = file.readlines()
-    array = list()
-    dict = {}
-    ctr = 0
-
-    for line in text:
-        data = line.split("\t")
-        if data[0] != "?":
-            word = data[0]
-            pos = data[len(data)-1]
-            # pos = get_tags(pos, 1)
-            dict[word] = pos.strip()
-        elif data[0] == '?':
-            array.append(dict)
-            dict = {}
-        ctr += 1
-
-    # print ctr
-    print array
-
-    return array
-
-
 def get_tags(tag, level):
     if level == 1:
         tag = tag.split("-")[0]
@@ -141,19 +117,6 @@ def count_qmark(file):
             print line
 
 
-def pos_vec(file):
-    input_file = file
-    data = []
-
-    data = to_wordpos_dict(input_file)
-    print data
-    # data = transform(data) #don't transfor for csr implementation
-
-    input_file.close()
-
-    return data
-
-
 def get_wh_question(file):
     reader = csv.reader(file)
 
@@ -207,6 +170,42 @@ def tokenize_word_data(file):
     return data
 
 
+def to_wordpos_dict(file):
+    text = file.readlines()
+    array = list()
+    dict = {}
+    ctr = 0
+
+    for line in text:
+        data = line.split("\t")
+        if data[0] != "?":
+            word = data[0]
+            pos = data[len(data)-1]
+            # pos = get_tags(pos, 1)
+            dict[word] = pos.strip()
+        elif data[0] == '?':
+            array.append(dict)
+            dict = {}
+        ctr += 1
+
+    # print ctr
+    print array
+
+    return array
+
+# def pos_vec(file):
+#     input_file = file
+#     data = []
+
+#     data = to_wordpos_dict(input_file)
+#     print data
+#     # data = transform(data) #don't transfor for csr implementation
+
+#     input_file.close()
+
+#     return data
+
+
 def main():
     """
     1. Preprocessing the raw data.
@@ -224,7 +223,7 @@ def main():
     """
     dataset = 'files/dataset_pos.out'
     labelled_data = 'files/labelled_data.csv'
-    pos_data = pos_vec(open(os.path.abspath(dataset)))
+    pos_data = to_wordpos_dict(open(os.path.abspath(dataset)))
     wh_vector = get_wh_question(open(os.path.abspath(labelled_data)))
     category = category_vector(open(os.path.abspath(labelled_data)))
 
